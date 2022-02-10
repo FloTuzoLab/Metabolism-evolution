@@ -1,0 +1,931 @@
+\begin{thebibliography}{}
+
+\bibitem[Albe {\em et~al.}(1990)Albe, Butler, and Wright]{Albe90}
+Albe, K.~R., Butler, M.~H., and Wright, B.~E. 1990.
+\newblock Cellular concentrations of enzymes and their substrates.
+\newblock {\em J Theor Biol\/}, {143}(2): 163--95.
+
+\bibitem[Alberty and Hammes(1958)Alberty and Hammes]{Alberty58}
+Alberty, R.~A. and Hammes, G.~G. 1958.
+\newblock Application of the theory of diffusion-controlled reactions to enzyme
+  kinetics.
+\newblock {\em The Journal of Physical Chemistry\/}, {62}(2): 154--159.
+
+\bibitem[Andrews(2020)Andrews]{Andrews20}
+Andrews, S.~S. 2020.
+\newblock Effects of surfaces and macromolecular crowding on bimolecular
+  reaction rates.
+\newblock {\em Phys Biol\/}, {17}(4): 045001.
+
+\bibitem[Atkinson(1989)Atkinson]{Atkinson89}
+Atkinson, K. 1989.
+\newblock {\em An Introduction to Numerical Analysis\/}.
+\newblock John Wiley and Sons, New York, 2nd edition.
+
+\bibitem[Bar-Even {\em et~al.}(2011)Bar-Even, Noor, Savir, Liebermeister,
+  Davidi, Tawfik, and Milo]{Bar-Even11}
+Bar-Even, A., Noor, E., Savir, Y., Liebermeister, W., Davidi, D., Tawfik,
+  D.~S., and Milo, R. 2011.
+\newblock The moderately efficient enzyme: Evolutionary and physicochemical
+  trends shaping enzyme parameters.
+\newblock {\em Biochemistry\/}, {50}(21): 4402--4410.
+
+\bibitem[Bar-Even {\em et~al.}(2015)Bar-Even, Milo, Noor, and
+  Tawfik]{Bar-Even15}
+Bar-Even, A., Milo, R., Noor, E., and Tawfik, D.~S. 2015.
+\newblock The moderately efficient enzyme: Futile encounters and enzyme
+  floppiness.
+\newblock {\em Biochemistry\/}, {54}(32): 4969--4977.
+
+\bibitem[Bershtein {\em et~al.}(2017)Bershtein, Serohijos, and
+  Shakhnovich]{Bershtein17}
+Bershtein, S., Serohijos, A.~W., and Shakhnovich, E.~I. 2017.
+\newblock Bridging the physical scales in evolutionary biology: from protein
+  sequence space to fitness of organisms and populations.
+\newblock {\em Current Opinion in Structural Biology\/}, {42}: 31--40.
+
+\bibitem[Blanco {\em et~al.}(2018)Blanco, Garc{\'e}s, Madurga, and
+  Mas]{Blanco18}
+Blanco, P.~M., Garc{\'e}s, J.~L., Madurga, S., and Mas, F. 2018.
+\newblock Macromolecular diffusion in crowded media beyond the hard-sphere
+  model.
+\newblock {\em Soft Matter\/}, {14}: 3105--3114.
+
+\bibitem[Bloom {\em et~al.}(2004)Bloom, Wilke, Arnold, and Adami]{Bloom04}
+Bloom, J., Wilke, C., Arnold, F., and Adami, C. 2004.
+\newblock Stability and the evolvability of function in a model protein.
+\newblock {\em Biophysical Journal\/}, {86}: 2758--2764.
+
+\bibitem[Bloom {\em et~al.}(2007)Bloom, Lu, Chen, Raval, Venturelli, and
+  Arnold]{Bloom07}
+Bloom, J.~D., Lu, Z., Chen, D., Raval, A., Venturelli, O.~S., and Arnold, F.~H.
+  2007.
+\newblock Evolution favors protein mutational robustness in sufficiently large
+  populations.
+\newblock {\em BMC Biology\/}, {5}(1): 29.
+
+\bibitem[Bloom {\em et~al.}(2006)Bloom, Labthavikul, Otey, and Arnold]{Bloom06}
+Bloom, J.~D., Labthavikul, S.~T., Otey, C.~R., and Arnold, F.~H. 2006.
+\newblock Protein stability promotes evolvability.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {103}(15):
+  5869.
+
+\bibitem[Bloom {\em et~al.}(2005)Bloom, Silberg, Wilke, Drummond, Adami, and
+  Arnold]{Bloom05}
+Bloom, J.~D., Silberg, J.~J., Wilke, C.~O., Drummond, D.~A., Adami, C., and
+  Arnold, F.~H. 2005.
+\newblock Thermodynamic prediction of protein neutrality.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America\/}, {102}(3): 606.
+
+\bibitem[Bobay and Ochman(2018)Bobay and Ochman]{Bobay18}
+Bobay, L.-M. and Ochman, H. 2018.
+\newblock Factors driving effective population size and pan-genome evolution in
+  bacteria.
+\newblock {\em BMC Evolutionary Biology\/}, {18}(1): 153.
+
+\bibitem[Boer {\em et~al.}(2010)Boer, Crutchfield, Bradley, Botstein, and
+  Rabinowitz]{Boer10}
+Boer, V.~M., Crutchfield, C.~A., Bradley, P.~H., Botstein, D., and Rabinowitz,
+  J.~D. 2010.
+\newblock Growth-limiting intracellular metabolites in yeast growing under
+  diverse nutrient limitations.
+\newblock {\em Molecular biology of the cell\/}, {21}(1): 198--211.
+
+\bibitem[Bosdriesz {\em et~al.}(2018)Bosdriesz, Wortel, Haanstra, Wagner, de~la
+  Torre~Cort{\'e}s, and Teusink]{Bosdriesz18}
+Bosdriesz, E., Wortel, M.~T., Haanstra, J.~R., Wagner, M.~J., de~la
+  Torre~Cort{\'e}s, P., and Teusink, B. 2018.
+\newblock Low affinity uniporter carrier proteins can increase net substrate
+  uptake rate by reducing efflux.
+\newblock {\em Scientific Reports\/}, {8}(1): 5576.
+
+\bibitem[Briggs and Haldane(1925)Briggs and Haldane]{Briggs25}
+Briggs, G.~E. and Haldane, J.~B. 1925.
+\newblock A note on the kinetics of enzyme action.
+\newblock {\em The Biochemical journal\/}, {19}(2): 338--339.
+
+\bibitem[Bucciantini {\em et~al.}(2002)Bucciantini, Giannoni, Chiti, Baroni,
+  Formigli, Zurdo, Taddei, Ramponi, Dobson, and Stefani]{Bucciantini02}
+Bucciantini, M., Giannoni, E., Chiti, F., Baroni, F., Formigli, L., Zurdo, J.,
+  Taddei, N., Ramponi, G., Dobson, C.~M., and Stefani, M. 2002.
+\newblock Inherent toxicity of aggregates implies a common mechanism for
+  protein misfolding diseases.
+\newblock {\em Nature\/}, {416}(6880): 507--511.
+
+\bibitem[Burns {\em et~al.}(1985)Burns, Cornish-Bowden, Groen, Heinrich,
+  Kacser, Porteous, Rapoport, Rapoport, Stucki, Tager, Wanders, and
+  Westerhoff]{Burns85}
+Burns, J., Cornish-Bowden, A., Groen, A., Heinrich, R., Kacser, H., Porteous,
+  J., Rapoport, S., Rapoport, T., Stucki, J., Tager, J., Wanders, R., and
+  Westerhoff, H. 1985.
+\newblock Control analysis of metabolic systems.
+\newblock {\em Trends in Biochemical Sciences\/}, {10}(1): 16.
+
+\bibitem[Carlin {\em et~al.}(2016)Carlin, Caster, Wang, Betzenderfer, Chen,
+  Duong, Ryklansky, Alpekin, Beaumont, Kapoor, Kim, Mohabbot, Pang, Teel,
+  Whithaus, Tagkopoulos, and Siegel]{Carlin16}
+Carlin, D.~A., Caster, R.~W., Wang, X., Betzenderfer, S.~A., Chen, C.~X.,
+  Duong, V.~M., Ryklansky, C.~V., Alpekin, A., Beaumont, N., Kapoor, H., Kim,
+  N., Mohabbot, H., Pang, B., Teel, R., Whithaus, L., Tagkopoulos, I., and
+  Siegel, J.~B. 2016.
+\newblock Kinetic characterization of 100 glycoside hydrolase mutants enables
+  the discovery of structural features correlated with kinetic constants.
+\newblock {\em PLOS ONE\/}, {11}(1): e0147596--.
+
+\bibitem[Chakrabarti(1994)Chakrabarti]{Chakrabarti94}
+Chakrabarti, A.~C. 1994.
+\newblock Permeability of membranes to amino acids and modified amino acids:
+  Mechanisms involved in translocation.
+\newblock {\em Amino Acids\/}, {6}(3): 213--229.
+
+\bibitem[Chou {\em et~al.}(2014)Chou, Delaney, Draghi, and Marx]{Chou14}
+Chou, H.-H., Delaney, N.~F., Draghi, J.~A., and Marx, C.~J. 2014.
+\newblock Mapping the fitness landscape of gene expression uncovers the cause
+  of antagonism and sign epistasis between adaptive mutations.
+\newblock {\em PLOS Genetics\/}, {10}(2): e1004149--.
+
+\bibitem[Clark(1991)Clark]{Clark91}
+Clark, A.~G. 1991.
+\newblock Mutation-selection balance and metabolic control theory.
+\newblock {\em Genetics\/}, {129}(3): 909--923.
+
+\bibitem[Cornejo {\em et~al.}(2014)Cornejo, Abreu, and Komeili]{Cornejo14}
+Cornejo, E., Abreu, N., and Komeili, A. 2014.
+\newblock Compartmentalization and organelle formation in bacteria.
+\newblock {\em Curr Opin Cell Biol\/}, {26}: 132--138.
+
+\bibitem[Cornish-Bowden(1979)Cornish-Bowden]{Cornish-Bowden79a}
+Cornish-Bowden, A. 1979.
+\newblock {\em Chapter 2 - Introduction to enzyme kinetics\/}, pages 16--38.
+\newblock Butterworth-Heinemann.
+
+\bibitem[Danielli(1954)Danielli]{danielli1954}
+Danielli, J. 1954.
+\newblock Morphological and molecular aspects of active transport.
+\newblock In {\em Symposia of the Society for Experimental Biology\/},
+  volume~8, pages 502--516, DOWNING ST, CAMBRIDGE. COMPANY BIOLOGISTS LTD UNIV
+  CAMBRIDGE DEPT ZOOLOGY.
+
+\bibitem[Davidi {\em et~al.}(2018)Davidi, Longo, Jab{\l}o{\'n}ska, Milo, and
+  Tawfik]{Davidi18}
+Davidi, D., Longo, L.~M., Jab{\l}o{\'n}ska, J., Milo, R., and Tawfik, D.~S.
+  2018.
+\newblock A bird's-eye view of enzyme evolution: Chemical, physicochemical, and
+  physiological considerations.
+\newblock {\em Chemical Reviews\/}, {118}(18): 8786--8797.
+
+\bibitem[Davidi {\em et~al.}(2016)Davidi, Noor, Liebermeister, Bar-Even,
+  Flamholz, Tummler, Barenholz, Goldenfeld, Shlomi, and Milo]{Davidi16}
+Davidi, D., Noor, E., Liebermeister, W., Bar-Even, A., Flamholz, A., Tummler,
+  K., Barenholz, U., Goldenfeld, M., Shlomi, T., and Milo, R. 2016.
+\newblock Global characterization of in vivo enzyme catalytic rates and their
+  correspondence to in vitro $k_{cat}$ measurements.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {113}(12):
+  3401.
+
+\bibitem[Dean(1995)Dean]{Dean95}
+Dean, A.~M. 1995.
+\newblock A molecular investigation of genotype by environment interactions.
+\newblock {\em Genetics\/}, {139}(1): 19--33.
+
+\bibitem[Dean {\em et~al.}(1986)Dean, Dykhuizen, and Hartl]{Dean86}
+Dean, A.~M., Dykhuizen, D.~E., and Hartl, D.~L. 1986.
+\newblock Fitness as a function of β-galactosidase activity in escherichia
+  coli.
+\newblock {48}(1): 1--8.
+
+\bibitem[Dekel and Alon(2005)Dekel and Alon]{Dekel05}
+Dekel, E. and Alon, U. 2005.
+\newblock Optimality and evolutionary tuning of the expression level of a
+  protein.
+\newblock {\em Nature\/}, {436}(7050): 588--592.
+
+\bibitem[DePristo {\em et~al.}(2005)DePristo, Weinreich, and Hartl]{DePristo05}
+DePristo, M.~A., Weinreich, D.~M., and Hartl, D.~L. 2005.
+\newblock Missense meanderings in sequence space: a biophysical view of protein
+  evolution.
+\newblock {\em Nature Reviews Genetics\/}, {6}(9): 678--687.
+
+\bibitem[Diekmann and Pereira-Leal(2013)Diekmann and Pereira-Leal]{Diekmann13}
+Diekmann, Y. and Pereira-Leal, J. 2013.
+\newblock Evolution of intracellular compartmentalization.
+\newblock {\em Biochem J\/}, {449}(2): 319--331.
+
+\bibitem[Dill {\em et~al.}(2011)Dill, Ghosh, and Schmit]{Dill11}
+Dill, K.~A., Ghosh, K., and Schmit, J.~D. 2011.
+\newblock Physical limits of cells and proteomes.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {108}(44):
+  17876.
+
+\bibitem[Dong {\em et~al.}(1995)Dong, Nilsson, and Kurland]{Dong95}
+Dong, H., Nilsson, L., and Kurland, C.~G. 1995.
+\newblock Gratuitous overexpression of genes in escherichia coli leads to
+  growth inhibition and ribosome destruction.
+\newblock {\em Journal of Bacteriology\/}, {177}(6): 1497.
+
+\bibitem[Drummond and Wilke(2008)Drummond and Wilke]{Drummond08}
+Drummond, D.~A. and Wilke, C.~O. 2008.
+\newblock Mistranslation-induced protein misfolding as a dominant constraint on
+  coding-sequence evolution.
+\newblock {\em Cell\/}, {134}(2): 341--352.
+
+\bibitem[Drummond {\em et~al.}(2005)Drummond, Bloom, Adami, Wilke, and
+  Arnold]{Drummond05}
+Drummond, D.~A., Bloom, J.~D., Adami, C., Wilke, C.~O., and Arnold, F.~H. 2005.
+\newblock Why highly expressed proteins evolve slowly.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America\/}, {102}(40): 14338.
+
+\bibitem[Dykhuizen and Dean(1990)Dykhuizen and Dean]{Dykhuizen90}
+Dykhuizen, D.~E. and Dean, A.~M. 1990.
+\newblock Enzyme activity and fitness: Evolution in solution.
+\newblock {\em Trends Ecol Evol\/}, {5}(8): 257--262.
+
+\bibitem[Dykhuizen and Dean(1994)Dykhuizen and Dean]{Dykhuizen94}
+Dykhuizen, D.~E. and Dean, A.~M. 1994.
+\newblock Predicted fitness changes along an environmental gradient.
+\newblock {\em Evolutionary Ecology\/}, {8}(5): 524--541.
+
+\bibitem[Dykhuizen {\em et~al.}(1987)Dykhuizen, Dean, and Hartl]{Dykhuizen87}
+Dykhuizen, D.~E., Dean, A.~M., and Hartl, D.~L. 1987.
+\newblock Metabolic flux and fitness.
+\newblock {\em Genetics\/}, {115}(1): 25--31.
+
+\bibitem[Echave(2019)Echave]{Echave19}
+Echave, J. 2019.
+\newblock Beyond stability constraints: A biophysical model of enzyme evolution
+  with selection on stability and activity.
+\newblock {\em Molecular Biology and Evolution\/}, {36}(3): 613--620.
+
+\bibitem[Echave and Wilke(2017)Echave and Wilke]{Echave17a}
+Echave, J. and Wilke, C.~O. 2017.
+\newblock Biophysical models of protein evolution: Understanding the patterns
+  of evolutionary sequence divergence.
+\newblock {\em Annu Rev Biophys\/}, {46}: 85--103.
+
+\bibitem[Eisenthal {\em et~al.}(2007)Eisenthal, Danson, and Hough]{Eisenthal07}
+Eisenthal, R., Danson, M.~J., and Hough, D.~W. 2007.
+\newblock Catalytic efficiency and $k_{cat}/k_{M}$: a useful comparator?
+\newblock {\em Trends in Biotechnology\/}, {25}(6): 247--249.
+
+\bibitem[Ellis(2001)Ellis]{Ellis01}
+Ellis, R.~J. 2001.
+\newblock Macromolecular crowding: obvious but underappreciated.
+\newblock {\em Trends in Biochemical Sciences\/}, {26}(10): 597--604.
+
+\bibitem[Eyre-Walker and Keightley(2007)Eyre-Walker and
+  Keightley]{EyreWalker07}
+Eyre-Walker, A. and Keightley, P.~D. 2007.
+\newblock The distribution of fitness effects of new mutations.
+\newblock {\em Nature Reviews Genetics\/}, {8}(8): 610--618.
+
+\bibitem[Fell(1992)Fell]{Fell92}
+Fell, D.~A. 1992.
+\newblock Metabolic control analysis: a survey of its theoretical and
+  experimental development.
+\newblock {\em The Biochemical journal\/}, {286 ( Pt 2)}(Pt 2): 313--330.
+
+\bibitem[Geiler-Samerotte {\em et~al.}(2011)Geiler-Samerotte, Dion, Budnik,
+  Wang, Hartl, and Drummond]{Geiler-Samerotte11}
+Geiler-Samerotte, K.~A., Dion, M.~F., Budnik, B.~A., Wang, S.~M., Hartl, D.~L.,
+  and Drummond, D.~A. 2011.
+\newblock Misfolded proteins impose a dosage-dependent fitness cost and trigger
+  a cytosolic unfolded protein response in yeast.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {108}(2):
+  680.
+
+\bibitem[Griffith and Jarvis(1996)Griffith and Jarvis]{Griffith96}
+Griffith, D.~A. and Jarvis, S.~M. 1996.
+\newblock Nucleoside and nucleobase transport systems of mammalian cells.
+\newblock {\em Biochimica et Biophysica Acta (BBA) - Reviews on
+  Biomembranes\/}, {1286}(3): 153--181.
+
+\bibitem[Gudelj {\em et~al.}(2010)Gudelj, Weitz, Ferenci, Claire Horner-Devine,
+  Marx, Meyer, and Forde]{Gudelj10}
+Gudelj, I., Weitz, J.~S., Ferenci, T., Claire Horner-Devine, M., Marx, C.~J.,
+  Meyer, J.~R., and Forde, S.~E. 2010.
+\newblock An integrative approach to understanding microbial diversity: from
+  intracellular mechanisms to community structure.
+\newblock {\em Ecology Letters\/}, {13}(9): 1073--1084.
+
+\bibitem[Haldane(1930)Haldane]{Haldane30}
+Haldane, J. B.~S. 1930.
+\newblock {\em Enzymes\/}.
+\newblock Longmans, Green, London, New York.
+
+\bibitem[Hartl {\em et~al.}(1985)Hartl, Dykhuizen, and Dean]{Hartl85}
+Hartl, D.~L., Dykhuizen, D.~E., and Dean, A.~M. 1985.
+\newblock Limits of adaptation: the evolution of selective neutrality.
+\newblock {\em Genetics\/}, {111}(3): 655--674.
+
+\bibitem[Heckmann {\em et~al.}(2018)Heckmann, Zielinski, and
+  Palsson]{Heckmann18}
+Heckmann, D., Zielinski, D.~C., and Palsson, B.~O. 2018.
+\newblock Modeling genome-wide enzyme evolution predicts strong epistasis
+  underlying catalytic turnover rates.
+\newblock {\em Nature Communications\/}, {9}(1): 5270.
+
+\bibitem[Heim {\em et~al.}(2017)Heim, Payne, Finnegan, Knope, Kowalewski,
+  Lyons, McShea, Novack-Gottshall, Smith, and Wang]{Heim17}
+Heim, N.~A., Payne, J.~L., Finnegan, S., Knope, M.~L., Kowalewski, M., Lyons,
+  S.~K., McShea, D.~W., Novack-Gottshall, P.~M., Smith, F.~A., and Wang, S.~C.
+  2017.
+\newblock Hierarchical complexity and the size limits of life.
+\newblock {\em Proceedings of the Royal Society B: Biological Sciences\/},
+  {284}(1857): 20171039.
+
+\bibitem[Heinrich and Rapoport(1974)Heinrich and Rapoport]{Heinrich74}
+Heinrich, R. and Rapoport, T.~A. 1974.
+\newblock A linear steady-state treatment of enzymatic chains. general
+  properties, control and effector strength.
+\newblock {\em Eur J Biochem\/}, {42}(1): 89--95.
+
+\bibitem[Heinrich {\em et~al.}(1991)Heinrich, Schuster, and
+  Holzh{\"u}tter]{Heinrich91}
+Heinrich, R., Schuster, S., and Holzh{\"u}tter, H.~G. 1991.
+\newblock Mathematical analysis of enzymic reaction systems using optimization
+  principles.
+\newblock {\em Eur J Biochem\/}, {201}(1): 1--21.
+
+\bibitem[Hodgins-Davis {\em et~al.}(2019)Hodgins-Davis, Duveau, Walker, and
+  Wittkopp]{Hodgins-Davis19}
+Hodgins-Davis, A., Duveau, F., Walker, E.~A., and Wittkopp, P.~J. 2019.
+\newblock Empirical measures of mutational effects define neutral models of
+  regulatory evolution in $saccharomyces~cerevisiae$.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {116}(42):
+  21085.
+
+\bibitem[Huang {\em et~al.}(2001)Huang, Holden, and Raushel]{Huang01}
+Huang, X., Holden, H.~M., and Raushel, F.~M. 2001.
+\newblock Channeling of substrates and intermediates in enzyme-catalyzed
+  reactions.
+\newblock {\em Annual Review of Biochemistry\/}, {70}(1): 149--180.
+
+\bibitem[Iwasa {\em et~al.}(2004)Iwasa, Michor, and Nowak]{Iwasa04}
+Iwasa, Y., Michor, F., and Nowak, M.~A. 2004.
+\newblock Evolutionary dynamics of invasion and escape.
+\newblock {\em J Theor Biol\/}, {226}(2): 205--214.
+
+\bibitem[Jiang and Guo(2007)Jiang and Guo]{Jiang07}
+Jiang, M. and Guo, Z. 2007.
+\newblock Effects of macromolecular crowding on the intrinsic catalytic
+  efficiency and structure of enterobactin-specific isochorismate synthase.
+\newblock {\em Journal of the American Chemical Society\/}, {129}(4): 730--731.
+
+\bibitem[Johnson and Goody(2011)Johnson and Goody]{Johnson11}
+Johnson, K.~A. and Goody, R.~S. 2011.
+\newblock The original michaelis constant: Translation of the 1913
+  michaelis--menten paper.
+\newblock {\em Biochemistry\/}, {50}(39): 8264--8269.
+
+\bibitem[Jones {\em et~al.}(2015)Jones, Hern{\'a}ndez~Lozada, and
+  Pfleger]{Jones15}
+Jones, C.~M., Hern{\'a}ndez~Lozada, N.~J., and Pfleger, B.~F. 2015.
+\newblock Efflux systems in bacteria and their metabolic engineering
+  applications.
+\newblock {\em Applied microbiology and biotechnology\/}, {99}(22): 9381--9393.
+
+\bibitem[Kacser and Beeby(1984)Kacser and Beeby]{Kacser84}
+Kacser, H. and Beeby, R. 1984.
+\newblock Evolution of catalytic proteins.
+\newblock {\em Journal of Molecular Evolution\/}, {20}(1): 38--51.
+
+\bibitem[Kacser and Burns(1973)Kacser and Burns]{Kacser73}
+Kacser, H. and Burns, J.~A. 1973.
+\newblock The control of flux.
+\newblock {\em Symp Soc Exp Biol\/}, {27}: 65--104.
+
+\bibitem[Kacser {\em et~al.}(1995)Kacser, Burns, Kacser, and Fell]{Kacser95}
+Kacser, H., Burns, J.~A., Kacser, H., and Fell, D.~A. 1995.
+\newblock The control of flux.
+\newblock {\em Biochemical Society Transactions\/}, {23}(2): 341--366.
+
+\bibitem[Kafri {\em et~al.}(2016)Kafri, Metzl-Raz, Jona, and Barkai]{Kafri16}
+Kafri, M., Metzl-Raz, E., Jona, G., and Barkai, N. 2016.
+\newblock The cost of protein production.
+\newblock {\em Cell Reports\/}, {14}(1): 22--31.
+
+\bibitem[Kaltenbach and Tokuriki(2014)Kaltenbach and Tokuriki]{Kaltenbach14}
+Kaltenbach, M. and Tokuriki, N. 2014.
+\newblock Dynamics and constraints of enzyme evolution.
+\newblock {\em J Exp Zool B Mol Dev Evol\/}, {322}(7): 468--487.
+
+\bibitem[Keller {\em et~al.}(2015)Keller, Piedrafita, and Ralser]{Keller15}
+Keller, M.~A., Piedrafita, G., and Ralser, M. 2015.
+\newblock The widespread role of non-enzymatic reactions in cellular
+  metabolism.
+\newblock {\em Current opinion in biotechnology\/}, {34}: 153--161.
+
+\bibitem[Khersonsky and Tawfik(2010)Khersonsky and Tawfik]{Khersonsky10}
+Khersonsky, O. and Tawfik, D.~S. 2010.
+\newblock Enzyme promiscuity: a mechanistic and evolutionary perspective.
+\newblock {\em Annu Rev Biochem\/}, {79}: 471--505.
+
+\bibitem[Kimura(1968)Kimura]{Kimura68}
+Kimura, M. 1968.
+\newblock Evolutionary rate at the molecular level.
+\newblock {\em Nature\/}, {217}(5129): 624--626.
+
+\bibitem[Kinsler {\em et~al.}(2020)Kinsler, Geiler-Samerotte, Petrov, Cooper,
+  Barkai, and Gresham]{Kinsler20}
+Kinsler, G., Geiler-Samerotte, K., Petrov, D.~A., Cooper, V.~S., Barkai, N.,
+  and Gresham, D. 2020.
+\newblock Fitness variation across subtle environmental perturbations reveals
+  local modularity and global pleiotropy of adaptation.
+\newblock {\em eLife\/}, {9}: e61271.
+
+\bibitem[Klipp and Heinrich(1994)Klipp and Heinrich]{Klipp94}
+Klipp, E. and Heinrich, R. 1994.
+\newblock Evolutionary optimization of enzyme kinetic parameters; effect of
+  constraints.
+\newblock {\em Journal of Theoretical Biology\/}, {171}(3): 309--323.
+
+\bibitem[Knies {\em et~al.}(2017)Knies, Cai, and Weinreich]{Knies17}
+Knies, J., Cai, F., and Weinreich, D.~M. 2017.
+\newblock Enzyme efficiency but not thermostability drives cefotaxime
+  resistance evolution in tem-1 β-lactamase.
+\newblock {\em Molecular Biology and Evolution\/}, page msx053.
+
+\bibitem[Knowles and Albery(1977)Knowles and Albery]{Knowles77}
+Knowles, J.~R. and Albery, W.~J. 1977.
+\newblock Perfection in enzyme catalysis: the energetics of triosephosphate
+  isomerase.
+\newblock {\em Accounts of Chemical Research\/}, {10}(4): 105--111.
+
+\bibitem[Koshland(2002)Koshland]{Koshland02}
+Koshland, D.~E. 2002.
+\newblock The application and usefulness of the ratio kcat/km.
+\newblock {\em Bioorganic Chemistry\/}, {30}(3): 211--213.
+
+\bibitem[Kotyk(1967)Kotyk]{Kotyk67}
+Kotyk, A. 1967.
+\newblock Mobility of the free and of the loaded monosaccharide carrier in
+  saccharomyces cerevisiae.
+\newblock {\em Biochimica et Biophysica Acta (BBA) - Biomembranes\/}, {135}(1):
+  112--119.
+
+\bibitem[Landry {\em et~al.}(2007)Landry, Lemos, Rifkin, Dickinson, and
+  Hartl]{Landry07}
+Landry, C.~R., Lemos, B., Rifkin, S.~A., Dickinson, W.~J., and Hartl, D.~L.
+  2007.
+\newblock Genetic properties influencing the evolvability of gene expression.
+\newblock {\em Science\/}, {317}(5834): 118.
+
+\bibitem[Lang {\em et~al.}(2009)Lang, Murray, and Botstein]{Lang09}
+Lang, G.~I., Murray, A.~W., and Botstein, D. 2009.
+\newblock The cost of gene expression underlies a fitness trade-off in yeast.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {106}(14):
+  5755.
+
+\bibitem[Lilja and Johnson(2017)Lilja and Johnson]{Lilja17}
+Lilja, E.~E. and Johnson, D.~R. 2017.
+\newblock Metabolite toxicity determines the pace of molecular evolution within
+  microbial populations.
+\newblock {\em BMC Evolutionary Biology\/}, {17}(1): 52.
+
+\bibitem[Lunzer {\em et~al.}(2005)Lunzer, Miller, Felsheim, and Dean]{Lunzer05}
+Lunzer, M., Miller, S.~P., Felsheim, R., and Dean, A.~M. 2005.
+\newblock The biochemical architecture of an ancient adaptive landscape.
+\newblock {\em Science\/}, {310}(5747): 499--501.
+
+\bibitem[Lunzer {\em et~al.}(2010)Lunzer, Golding, and Dean]{Lunzer10}
+Lunzer, M., Golding, G.~B., and Dean, A.~M. 2010.
+\newblock Pervasive cryptic epistasis in molecular evolution.
+\newblock {\em PLOS Genetics\/}, {6}(10): e1001162--.
+
+\bibitem[Lynch and Marinov(2015)Lynch and Marinov]{Lynch15}
+Lynch, M. and Marinov, G.~K. 2015.
+\newblock The bioenergetic costs of a gene.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America\/}, {112}(51): 15690--15695.
+
+\bibitem[Maier {\em et~al.}(2002)Maier, V{\"o}lker, Boles, and
+  Fuhrmann]{Maier02}
+Maier, A., V{\"o}lker, B., Boles, E., and Fuhrmann, G.~F. 2002.
+\newblock {Characterisation of glucose transport in Saccharomyces cerevisiae
+  with plasma membrane vesicles (countertransport) and intact cells (initial
+  uptake) with single Hxt1, Hxt2, Hxt3, Hxt4, Hxt6, Hxt7 or Gal2 transporters}.
+\newblock {\em FEMS Yeast Research\/}, {2}(4): 539--550.
+
+\bibitem[Metzger {\em et~al.}(2016)Metzger, Duveau, Yuan, Tryban, Yang, and
+  Wittkopp]{Metzger16}
+Metzger, B. P.~H., Duveau, F., Yuan, D.~C., Tryban, S., Yang, B., and Wittkopp,
+  P.~J. 2016.
+\newblock Contrasting frequencies and effects of cis- and trans-regulatory
+  mutations affecting gene expression.
+\newblock {\em Molecular Biology and Evolution\/}, {33}(5): 1131--1146.
+
+\bibitem[Michaelis and Menten(1913)Michaelis and Menten]{MichaelisMenten1913}
+Michaelis, L. and Menten, M. 1913.
+\newblock Die kinetik der invertinwirkung. biochemische zeitschrift.
+\newblock {\em Biochemische Zeitschrift\/}, {49}: 333--369.
+
+\bibitem[Miller(2017)Miller]{Miller17}
+Miller, S.~R. 2017.
+\newblock An appraisal of the enzyme stability‐activity trade‐off.
+\newblock {\em Evolution\/}, {71}(7): 1876--1887.
+
+\bibitem[Milo {\em et~al.}(2010)Milo, Jorgensen, Moran, Weber, and
+  Springer]{Milo10}
+Milo, R., Jorgensen, P., Moran, U., Weber, G., and Springer, M. 2010.
+\newblock Bionumbers--the database of key numbers in molecular and cell
+  biology.
+\newblock {\em Nucleic acids research\/}, {38}(Database issue): D750--D753.
+
+\bibitem[Muramatsu and Minton(1988)Muramatsu and Minton]{Muramatsu88}
+Muramatsu, N. and Minton, A.~P. 1988.
+\newblock Tracer diffusion of globular proteins in concentrated protein
+  solutions.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {85}(9):
+  2984.
+
+\bibitem[Newton {\em et~al.}(2018)Newton, Arcus, Gerth, and Patrick]{Newton18}
+Newton, M.~S., Arcus, V.~L., Gerth, M.~L., and Patrick, W.~M. 2018.
+\newblock Enzyme evolution: innovation is easy, optimization is complicated.
+\newblock {\em Current Opinion in Structural Biology\/}, {48}: 110--116.
+
+\bibitem[Niehaus and Hillmann(2020)Niehaus and Hillmann]{Niehaus20}
+Niehaus, T.~D. and Hillmann, K.~B. 2020.
+\newblock Enzyme promiscuity, metabolite damage, and metabolite damage control
+  systems of the tricarboxylic acid cycle.
+\newblock {\em The FEBS Journal\/}, {287}(7): 1343--1358.
+
+\bibitem[Noor {\em et~al.}(2016)Noor, Flamholz, Bar-Even, Davidi, Milo, and
+  Liebermeister]{Noor16}
+Noor, E., Flamholz, A., Bar-Even, A., Davidi, D., Milo, R., and Liebermeister,
+  W. 2016.
+\newblock The protein cost of metabolic fluxes: Prediction from enzymatic rate
+  laws and cost minimization.
+\newblock {\em PLOS Computational Biology\/}, {12}(11): e1005167.
+
+\bibitem[Novick and Weiner(1957)Novick and Weiner]{Novick57}
+Novick, A. and Weiner, M. 1957.
+\newblock Enzyme induction as an all-or-none phenomenon.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {43}(7):
+  553.
+
+\bibitem[Ohta(1992)Ohta]{Ohta92}
+Ohta, T. 1992.
+\newblock The nearly neutral theory of molecular evolution.
+\newblock {\em Annual Review of Ecology and Systematics\/}, {23}(1): 263--286.
+
+\bibitem[Orth {\em et~al.}(2010)Orth, Thiele, and Palsson]{Orth10}
+Orth, J.~D., Thiele, I., and Palsson, B.~{\O}. 2010.
+\newblock What is flux balance analysis?
+\newblock {\em Nature biotechnology\/}, {28}(3): 245--248.
+
+\bibitem[Otwinowski {\em et~al.}(2018)Otwinowski, McCandlish, and
+  Plotkin]{Otwinowski18}
+Otwinowski, J., McCandlish, D.~M., and Plotkin, J.~B. 2018.
+\newblock Inferring the shape of global epistasis.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {115}(32):
+  E7550.
+
+\bibitem[Ov{\'a}di and Saks(2004)Ov{\'a}di and Saks]{Ovadi04}
+Ov{\'a}di, J. and Saks, V. 2004.
+\newblock On the origin of intracellular compartmentation and organized
+  metabolic systems.
+\newblock {\em Molecular and Cellular Biochemistry\/}, {256}(1): 5--12.
+
+\bibitem[Peracchi(2018)Peracchi]{Peracchi18}
+Peracchi, A. 2018.
+\newblock The limits of enzyme specificity and the evolution of metabolism.
+\newblock {\em Trends in Biochemical Sciences\/}, {43}(12): 984--996.
+
+\bibitem[Pozdnyakova and Wittung-Stafshede(2010)Pozdnyakova and
+  Wittung-Stafshede]{Pozdnyakova10}
+Pozdnyakova, I. and Wittung-Stafshede, P. 2010.
+\newblock Non-linear effects of macromolecular crowding on enzymatic activity
+  of multi-copper oxidase.
+\newblock {\em Biochimica et Biophysica Acta (BBA) - Proteins and
+  Proteomics\/}, {1804}(4): 740--744.
+
+\bibitem[Ralston(1990)Ralston]{Ralston90}
+Ralston, G.~B. 1990.
+\newblock Effects of "crowding" in protein solutions.
+\newblock {\em Journal of Chemical Education\/}, {67}(10): 857.
+
+\bibitem[Reddy and Desai(2020)Reddy and Desai]{Reddy20}
+Reddy, G. and Desai, M.~M. 2020.
+\newblock Global epistasis emerges from a generic model of a complex trait.
+\newblock {\em bioRxiv\/}, page 2020.06.14.150946.
+
+\bibitem[Rich(2003)Rich]{Rich03}
+Rich, P.~R. 2003.
+\newblock The molecular machinery of keilin's respiratory chain.
+\newblock {\em Biochemical Society Transactions\/}, {31}(6): 1095--1105.
+
+\bibitem[Rivas and Minton(2018)Rivas and Minton]{Rivas18}
+Rivas, G. and Minton, A.~P. 2018.
+\newblock Toward an understanding of biochemical equilibria within living
+  cells.
+\newblock {\em Biophysical reviews\/}, {10}(2): 241--253.
+
+\bibitem[Rivas {\em et~al.}(2004)Rivas, Ferrone, and Herzfeld]{Rivas04}
+Rivas, G., Ferrone, F., and Herzfeld, J. 2004.
+\newblock Life in a crowded world.
+\newblock {\em EMBO reports\/}, {5}(1): 23--27.
+
+\bibitem[Rodrigues {\em et~al.}(2016)Rodrigues, Bershtein, Li, Lozovsky, Hartl,
+  and Shakhnovich]{Rodrigues16}
+Rodrigues, J.~V., Bershtein, S., Li, A., Lozovsky, E.~R., Hartl, D.~L., and
+  Shakhnovich, E.~I. 2016.
+\newblock Biophysical principles predict fitness landscapes of drug resistance.
+\newblock {\em Proc Natl Acad Sci U S A\/}, {113}(11): E1470--8.
+
+\bibitem[Sabate {\em et~al.}(2010)Sabate, de~Groot, and Ventura]{Sabate10}
+Sabate, R., de~Groot, N.~S., and Ventura, S. 2010.
+\newblock Protein folding and aggregation in bacteria.
+\newblock {\em Cellular and Molecular Life Sciences\/}, {67}(16): 2695--2715.
+
+\bibitem[Sch{\"a}uble {\em et~al.}(2013)Sch{\"a}uble, Stavrum, Puntervoll,
+  Schuster, and Heiland]{Schauble13}
+Sch{\"a}uble, S., Stavrum, A.~K., Puntervoll, P., Schuster, S., and Heiland, I.
+  2013.
+\newblock Effect of substrate competition in kinetic models of metabolic
+  networks.
+\newblock {\em FEBS Letters\/}, {587}(17): 2818--2824.
+
+\bibitem[Schavemaker {\em et~al.}(2018)Schavemaker, Boersma, and
+  Poolman]{Schavemaker18}
+Schavemaker, P.~E., Boersma, A.~J., and Poolman, B. 2018.
+\newblock How important is protein diffusion in prokaryotes?
+\newblock {\em Frontiers in Molecular Biosciences\/}, {5}: 93.
+
+\bibitem[Schmidt {\em et~al.}(2016)Schmidt, Rinaldi, Scalbert, Ferrari,
+  Achaintre, Gunter, Appleby, Key, and Travis]{Schmidt16}
+Schmidt, J.~A., Rinaldi, S., Scalbert, A., Ferrari, P., Achaintre, D., Gunter,
+  M.~J., Appleby, P.~N., Key, T.~J., and Travis, R.~C. 2016.
+\newblock Plasma concentrations and intakes of amino acids in male meat-eaters,
+  fish-eaters, vegetarians and vegans: a cross-sectional analysis in the
+  epic-oxford cohort.
+\newblock {\em European Journal of Clinical Nutrition\/}, {70}(3): 306--312.
+
+\bibitem[Schmidt {\em et~al.}(2003)Schmidt, Sunyaev, Bork, and
+  Dandekar]{Schmidt03}
+Schmidt, S., Sunyaev, S., Bork, P., and Dandekar, T. 2003.
+\newblock Metabolites: a helping hand for pathway evolution?
+\newblock {\em Trends in Biochemical Sciences\/}, {28}(6): 336--341.
+
+\bibitem[Schreiber {\em et~al.}(1994)Schreiber, Buckle, and
+  Fersht]{Schreiber94}
+Schreiber, G., Buckle, A.~M., and Fersht, A.~R. 1994.
+\newblock Stability and function: two constraints in the evolution of barstar
+  and other proteins.
+\newblock {\em Structure\/}, {2}(10): 945--51.
+
+\bibitem[Schuster {\em et~al.}(2008)Schuster, Pfeiffer, and Fell]{Schuster08}
+Schuster, S., Pfeiffer, T., and Fell, D.~A. 2008.
+\newblock Is maximization of molar yield in metabolic networks favoured by
+  evolution?
+\newblock {\em J Theor Biol\/}, {252}(3): 497--504.
+
+\bibitem[Scott {\em et~al.}(2010)Scott, Gunderson, Mateescu, Zhang, and
+  Hwa]{ScottM10}
+Scott, M., Gunderson, C.~W., Mateescu, E.~M., Zhang, Z., and Hwa, T. 2010.
+\newblock Interdependence of cell growth and gene expression: Origins and
+  consequences.
+\newblock {\em Science\/}, {330}(6007): 1099--1102.
+
+\bibitem[Serohijos {\em et~al.}(2012)Serohijos, Rimas, and
+  Shakhnovich]{Serohijos12}
+Serohijos, A. W.~R., Rimas, Z., and Shakhnovich, E.~I. 2012.
+\newblock Protein biophysics explains why highly abundant proteins evolve
+  slowly.
+\newblock {\em Cell Rep\/}, {2}(2): 249--256.
+
+\bibitem[Shoichet {\em et~al.}(1995)Shoichet, Baase, Kuroki, and
+  Matthews]{Shoichet95}
+Shoichet, B.~K., Baase, W.~A., Kuroki, R., and Matthews, B.~W. 1995.
+\newblock A relationship between protein stability and protein function.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America\/}, {92}(2): 452--456.
+
+\bibitem[Stein(1986a)Stein]{Stein86a}
+Stein, W.~D. 1986a.
+\newblock {\em CHAPTER 1 - Physical Basis of Movement across Cell Membranes\/},
+  chapter~1, pages 1--68.
+\newblock Academic Press.
+
+\bibitem[Stein(1986b)Stein]{Stein86d}
+Stein, W.~D. 1986b.
+\newblock {\em CHAPTER 4 - Facilitated Diffusion: The Simple Carrier\/},
+  chapter~4, pages 231--361.
+\newblock Academic Press.
+
+\bibitem[Stiffler {\em et~al.}(2015)Stiffler, Hekstra, and
+  Ranganathan]{Stiffler15}
+Stiffler, M.~A., Hekstra, D.~R., and Ranganathan, R. 2015.
+\newblock Evolvability as a function of purifying selection in tem-1
+  β-lactamase.
+\newblock {\em Cell\/}, {160}(5): 882--892.
+
+\bibitem[Stoebel {\em et~al.}(2008)Stoebel, Dean, and Dykhuizen]{Stoebel08}
+Stoebel, D.~M., Dean, A.~M., and Dykhuizen, D.~E. 2008.
+\newblock The cost of expression of $\textit{Escherichia coli lac}$ operon
+  proteins is in the process, not in the products.
+\newblock {\em Genetics\/}, {178}(3): 1653.
+
+\bibitem[Storz(2018)Storz]{Storz18}
+Storz, J.~F. 2018.
+\newblock Compensatory mutations and epistasis for protein function.
+\newblock {\em Current opinion in structural biology\/}, {50}: 18--25.
+
+\bibitem[Sweetlove and Fernie(2018)Sweetlove and Fernie]{Sweetlove18}
+Sweetlove, L.~J. and Fernie, A.~R. 2018.
+\newblock The role of dynamic enzyme assemblies and substrate channelling in
+  metabolic regulation.
+\newblock {\em Nature Communications\/}, {9}(1): 2136.
+
+\bibitem[Taverna and Goldstein(2002)Taverna and Goldstein]{Taverna02}
+Taverna, D.~M. and Goldstein, R.~A. 2002.
+\newblock Why are proteins marginally stable?
+\newblock {\em Proteins: Structure, Function, and Bioinformatics\/}, {46}(1):
+  105--109.
+
+\bibitem[ter Kuile and Cook(1994)ter Kuile and Cook]{Kuile94}
+ter Kuile, B.~H. and Cook, M. 1994.
+\newblock The kinetics of facilitated diffusion followed by enzymatic
+  conversion of the substrate.
+\newblock {\em Biochimica et Biophysica Acta (BBA) - Biomembranes\/},
+  {1193}(2): 235--239.
+
+\bibitem[Teusink {\em et~al.}(1998)Teusink, Diderich, Westerhoff, van Dam, and
+  Walsh]{Teusink98}
+Teusink, B., Diderich, J.~A., Westerhoff, H.~V., van Dam, K., and Walsh, M.~C.
+  1998.
+\newblock Intracellular glucose concentration in derepressed yeast cells
+  consuming glucose is high enough to reduce the glucose transport rate by
+  50{\%}.
+\newblock {\em Journal of bacteriology\/}, {180}(3): 556--562.
+
+\bibitem[Tokuriki and Tawfik(2009)Tokuriki and Tawfik]{Tokuriki09}
+Tokuriki, N. and Tawfik, D.~S. 2009.
+\newblock Stability effects of mutations and protein evolvability.
+\newblock {\em Current Opinion in Structural Biology\/}, {19}(5): 596--604.
+
+\bibitem[Tokuriki {\em et~al.}(2012)Tokuriki, Jackson, Afriat-Jurnou,
+  Wyganowski, Tang, and Tawfik]{Tokuriki12}
+Tokuriki, N., Jackson, C.~J., Afriat-Jurnou, L., Wyganowski, K.~T., Tang, R.,
+  and Tawfik, D.~S. 2012.
+\newblock Diminishing returns and tradeoffs constrain the laboratory
+  optimization of an enzyme.
+\newblock {\em Nature Communications\/}, {3}(1): 1257.
+
+\bibitem[Tokuriki {\em et~al.}(2008)Tokuriki, Stricher, Serrano, and
+  Tawfik]{Tokuriki08}
+Tokuriki, N., Stricher, F., Serrano, L., and Tawfik, D.~S. 2008.
+\newblock How protein stability and new functions trade off.
+\newblock {\em PLoS Computational Biology\/}, {4}(2): e1000002.
+
+\bibitem[Tokuriki {\em et~al.}(2007)Tokuriki, Stricher, Schymkowitz, Serrano,
+  and Tawfik]{Tokuriki07}
+Tokuriki, N., Stricher, F., Schymkowitz, J., Serrano, L., and Tawfik, D.~S.
+  2007.
+\newblock The stability effects of protein mutations appear to be universally
+  distributed.
+\newblock {\em Journal of Molecular Biology\/}, {369}(5): 1318--1332.
+
+\bibitem[van~den Burg and Eijsink(2002)van~den Burg and Eijsink]{Burg02}
+van~den Burg, B. and Eijsink, V. G.~H. 2002.
+\newblock Selection of mutations for increased protein stability.
+\newblock {\em Curr Opin Biotechnol\/}, {13}(4): 333--337.
+
+\bibitem[Wagner(2005)Wagner]{Wagner05}
+Wagner, A. 2005.
+\newblock {Energy Constraints on the Evolution of Gene Expression}.
+\newblock {\em Molecular Biology and Evolution\/}, {22}(6): 1365--1374.
+
+\bibitem[Walkiewicz {\em et~al.}(2012)Walkiewicz, Benitez~Cardenas, Sun,
+  Bacorn, Saxer, and Shamoo]{Walkiewicz12}
+Walkiewicz, K., Benitez~Cardenas, A.~S., Sun, C., Bacorn, C., Saxer, G., and
+  Shamoo, Y. 2012.
+\newblock Small changes in enzyme function can lead to surprisingly large
+  fitness effects during adaptive evolution of antibiotic resistance.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {109}(52):
+  21408.
+
+\bibitem[Wang and Zhang(2011)Wang and Zhang]{Wang11}
+Wang, Z. and Zhang, J. 2011.
+\newblock Impact of gene expression noise on organismal fitness and the
+  efficacy of natural selection.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America\/}, {108}(16): E67--E76.
+
+\bibitem[Weinreich and Chao(2005)Weinreich and Chao]{Weinreich05}
+Weinreich, D.~M. and Chao, L. 2005.
+\newblock Rapid evolutionary escape by large populations from local fitness
+  peaks is likely in nature.
+\newblock {\em Evolution\/}, {59}(6): 1175--1182.
+
+\bibitem[Weinreich {\em et~al.}(2006)Weinreich, Delaney, DePristo, and
+  Hartl]{Weinreich06}
+Weinreich, D.~M., Delaney, N.~F., DePristo, M.~A., and Hartl, D.~L. 2006.
+\newblock Darwinian evolution can follow only very few mutational paths to
+  fitter proteins.
+\newblock {\em Science\/}, {312}(5770): 111.
+
+\bibitem[Weinreich {\em et~al.}(2013)Weinreich, Lan, Wylie, and
+  Heckendorn]{Weinreich13}
+Weinreich, D.~M., Lan, Y., Wylie, C.~S., and Heckendorn, R.~B. 2013.
+\newblock Should evolutionary geneticists worry about higher-order epistasis?
+\newblock {\em Curr Opin Genet Dev\/}, {23}(6): 700--707.
+
+\bibitem[Weissman {\em et~al.}(2009)Weissman, Desai, Fisher, and
+  Feldman]{Weissman09}
+Weissman, D.~B., Desai, M.~M., Fisher, D.~S., and Feldman, M.~W. 2009.
+\newblock The rate at which asexual populations cross fitness valleys.
+\newblock {\em Theor Popul Biol\/}, {75}(4): 286--300.
+
+\bibitem[Welch and Easterby(1994)Welch and Easterby]{Welch94}
+Welch, G.~R. and Easterby, J.~S. 1994.
+\newblock Metabolic channeling versus free diffusion: transition-time analysis.
+\newblock {\em Trends Biochem Sci\/}, {19}(5): 193--197.
+
+\bibitem[Wilbrandt and Rosenberg(1961)Wilbrandt and Rosenberg]{Wilbrandt61}
+Wilbrandt, W. and Rosenberg, T. 1961.
+\newblock The concept of carrier transport and its corollaries in pharmacology.
+\newblock {\em Pharmacological Reviews\/}, {13}(2): 109.
+
+\bibitem[Williamson {\em et~al.}(1967)Williamson, Lund, and
+  Krebs]{Williamson67}
+Williamson, D.~H., Lund, P., and Krebs, H.~A. 1967.
+\newblock The redox state of free nicotinamide-adenine dinucleotide in the
+  cytoplasm and mitochondria of rat liver.
+\newblock {\em Biochem J\/}, {103}(2): 514--527.
+
+\bibitem[Wood {\em et~al.}(1968)Wood, Wirth, and Morgan]{Wood68}
+Wood, R.~E., Wirth, F. P.~J., and Morgan, H.~E. 1968.
+\newblock Glucose permeability of lipid bilayer membranes.
+\newblock {\em Biochim Biophys Acta\/}, {163}(2): 171--178.
+
+\bibitem[Wright and Rausher(2010)Wright and Rausher]{Wright10}
+Wright, K.~M. and Rausher, M.~D. 2010.
+\newblock The evolution of control and distribution of adaptive mutations in a
+  metabolic pathway.
+\newblock {\em Genetics\/}, {184}(2): 483.
+
+\bibitem[Wright(1931)Wright]{Wright31}
+Wright, S. 1931.
+\newblock Evolution in mendelian populations.
+\newblock {\em Genetics\/}, {16}(2): 97.
+
+\bibitem[Wright(1934)Wright]{Wright34}
+Wright, S. 1934.
+\newblock Physiological and evolutionary theories of dominance.
+\newblock {68}(714): 24--53.
+
+\bibitem[Xie {\em et~al.}(2004)Xie, Patching, Gallagher, Litherland, Brough,
+  Venter, Yao, Ng, Young, Herbert, Henderson, and Baldwin]{Xie04}
+Xie, H., Patching, S.~G., Gallagher, M.~P., Litherland, G.~J., Brough, A.~R.,
+  Venter, H., Yao, S. Y.~M., Ng, A. M.~L., Young, J.~D., Herbert, R.~B.,
+  Henderson, P. J.~F., and Baldwin, S.~A. 2004.
+\newblock Purification and properties of the escherichia coli nucleoside
+  transporter nupg, a paradigm for a major facilitator transporter sub-family.
+\newblock {\em Mol Membr Biol\/}, {21}(5): 323--336.
+
+\bibitem[Yang {\em et~al.}(2012)Yang, Liao, Zhuang, and Zhang]{Yang12}
+Yang, J.-R., Liao, B.-Y., Zhuang, S.-M., and Zhang, J. 2012.
+\newblock Protein misinteraction avoidance causes highly expressed proteins to
+  evolve slowly.
+\newblock {\em Proceedings of the National Academy of Sciences\/}, {109}(14):
+  E831.
+
+\bibitem[Yi and Dean(2019)Yi and Dean]{Yi19}
+Yi, X. and Dean, A.~M. 2019.
+\newblock Adaptive landscapes in the age of synthetic biology.
+\newblock {\em Molecular biology and evolution\/}, {36}(5): 890--907.
+
+\bibitem[Yue {\em et~al.}(2005)Yue, Li, and Moult]{Yue05}
+Yue, P., Li, Z., and Moult, J. 2005.
+\newblock Loss of protein structure stability as a major causative factor in
+  monogenic disease.
+\newblock {\em J Mol Biol\/}, {353}(2): 459--473.
+
+\bibitem[Zampieri {\em et~al.}(2019)Zampieri, H{\"o}rl, Hotz, M{\"u}ller, and
+  Sauer]{Zampieri2019}
+Zampieri, M., H{\"o}rl, M., Hotz, F., M{\"u}ller, N.~F., and Sauer, U. 2019.
+\newblock Regulatory mechanisms underlying coordination of amino acid and
+  glucose catabolism in escherichia coli.
+\newblock {\em Nature Communications\/}, {10}(1): 3354.
+
+\bibitem[Zhou and Zhong(1982)Zhou and Zhong]{Zhou82}
+Zhou, G.-Q. and Zhong, W.-Z. 1982.
+\newblock Diffusion-controlled reactions of enzymes.
+\newblock {\em European Journal of Biochemistry\/}, {128}(2‐3): 383--387.
+
+\bibitem[Zhou {\em et~al.}(2008)Zhou, Rivas, and Minton]{Zhou08}
+Zhou, H.-X., Rivas, G., and Minton, A.~P. 2008.
+\newblock Macromolecular crowding and confinement: Biochemical, biophysical,
+  and potential physiological consequences.
+\newblock {\em Annual Review of Biophysics\/}, {37}(1): 375--397.
+
+\bibitem[Zimmerman and Minton(1993)Zimmerman and Minton]{Zimmerman93}
+Zimmerman, S.~B. and Minton, A.~P. 1993.
+\newblock Macromolecular crowding: Biochemical, biophysical, and physiological
+  consequences.
+\newblock {\em Annual Review of Biophysics and Biomolecular Structure\/},
+  {22}(1): 27--65.
+
+\end{thebibliography}

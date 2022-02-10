@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: RUPEMEE.aux
+The style file: natbib.bst
+Database file #1: enzyme.bib
+Warning--empty journal in Dean86
+Warning--empty journal in Wright34
+You've used 148 entries,
+            2378 wiz_defined-function locations,
+            1605 strings with 34800 characters,
+and the built_in function-call counts, 75829 in all, are:
+= -- 7333
+> -- 4271
+< -- 77
++ -- 1306
+- -- 1243
+* -- 7327
+:= -- 13010
+add.period$ -- 671
+call.type$ -- 148
+change.case$ -- 927
+chr.to.int$ -- 147
+cite$ -- 150
+duplicate$ -- 2903
+empty$ -- 4884
+format.name$ -- 1477
+if$ -- 14935
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 153
+newline$ -- 743
+num.names$ -- 592
+pop$ -- 842
+preamble$ -- 1
+purify$ -- 931
+quote$ -- 0
+skip$ -- 1957
+stack$ -- 0
+substring$ -- 5257
+swap$ -- 595
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1317
+warning$ -- 2
+while$ -- 692
+width$ -- 0
+write$ -- 1927
+(There were 2 warnings)

@@ -1,0 +1,107 @@
+Phi=10^-3
+kf=10^8
+kcat=10^2
+kr=10^4
+N=100
+beta=10^-2
+Ew=10^-4
+Pn=0
+PnEw=0
+dt=10^-6
+
+for (i in 1:100000){
+  dPn=(Phi-kf*Ew*Pn+kcat*PnEw)*dt
+  dPE=(kf*Ew*Pn-(kcat+kr+beta)*PnEw)*dt
+  dE=(kcat/N*PnEw+(kcat+kr)*PnEw-beta*Ew-kf*Ew*Pn)*dt
+  Ew=Ew+dE
+  PnEw=PnEw+dPE
+  Pn=Pn+dPn
+  print(PnEw+Ew)
+}
+
+Pn_eq<-((kcat+kr+beta)*beta)/((kcat*(1+N)/N+kr)*kf-kf*(kcat+kr+beta))
+PnEw
+Ew
+Pn_eq
+Pn
+
+##TOY MODEL FITNESS BASED ON FLUX
+M_tab=c()
+w_tab=c()
+S_demand_tab<-c()
+S1_log10_tab=-1.75
+S2_log10_tab=-1.75#S1_log10_tab=seq(-4,-2,0.25)
+#S2_log10_tab=seq(-4,-2,0.25)
+S1_tab=10^S1_log10_tab
+S2_tab=10^S2_log10_tab
+for (s in 1:length(S1_log10_tab)){
+  plot(S_demand_tab,col="red",pch=19,xlim=c(0,10000),ylim=c(0,10^-4))
+  S_demand_sciss=0
+  Mtot=0
+  r_0=1
+  SA=4*pi*r_0^2
+  V=4/3*pi*r_0^3
+  beta=10^-4
+  N=10^5
+  M1=10^-6
+  M2=10^-6
+  S1=S1_tab[s]
+  S2=S2_tab[s]
+  M1S1=0
+  M2S2=0
+  kcat=10^2
+  kr=10^3
+  kf=10^6
+  dt=10^-4
+  t_max=10000
+  N_iter=t_max/dt
+  n=1
+  g=1
+  w=0
+  i=0
+  t_print=1
+  while (i<N_iter){
+    dM1S1=(kf*M1*S1-(kcat+kr+beta)*M1S1)*dt
+    dM2S2=(kf*M2*S2-(kcat+kr+beta)*M2S2)*dt
+    dSA=(kcat*M2S2*10^2*V-beta*SA)*dt
+    dV=SA^0.5*dSA/(4*sqrt(pi))
+    dM1=(kcat/N*M1S1+(kcat+kr)*M1S1-beta*M1-kf*M1*S1)*dt
+    dM2=(kcat/N*M1S1+(kcat+kr)*M2S2-beta*M2-kf*M2*S2)*dt
+    M1S1=(M1S1+dM1S1)/(1+dV/V)
+    M1=(M1+dM1)/(1+dV/V)
+    M2S2=(M2S2+dM2S2)/(1+dV/V)
+    M2=(M2+dM2)/(1+dV/V)
+    SA=(SA+dSA)
+    w=w+dSA*n
+    V=SA^(3/2)/(6*sqrt(pi))
+    if(V>10){
+      V_d=V
+      n=n*2
+      g=g+1
+      SA=SA/2
+      V=SA^(3/2)/(6*sqrt(pi))
+      M1S1=M1S1*(2*V/V_d)
+      M1=M1*(2*V/V_d)
+      M2S2=M2S2*(2*V/V_d)
+      M2=M2*(2*V/V_d)
+      S_demand_sciss=kf*M1*S1-kr*M1S1
+      Mtot=M1+M1S1
+    }
+    t=i*dt
+    if(t==t_print){
+      points(t,kf*M1*S1-kr*M1S1,col="red",pch=19,cex=0.2)
+      t_print=t_print+1
+    }
+  i=i+1  
+  }
+  if(S_demand_sciss==0){
+    S_demand_sciss=kf*M1*S1-kr*M1S1
+    Mtot=M1+M1S1
+  }
+  w_tab[s]=w
+  S_demand_tab[s]=S_demand_sciss
+  M_tab[s]=Mtot
+}
+  
+
+S_conc_min_nogrowth=beta*(kcat+kr+beta)/(kf*(kcat/N-beta))

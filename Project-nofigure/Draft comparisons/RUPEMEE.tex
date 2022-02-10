@@ -1,0 +1,484 @@
+\documentclass[11pt,onecolumn]{article}
+
+\usepackage{url}
+\usepackage{amsmath,amsfonts,amssymb,mhchem,chemfig}
+\usepackage{cases}
+\usepackage{setspace}
+\usepackage{caption}
+\usepackage{textgreek}
+\usepackage{authblk}
+\usepackage{natbib}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[margin=0.5in]{caption}
+\captionsetup[figure]{font=footnotesize,labelfont=footnotesize}
+\pagestyle{plain}
+\providecommand{\keywords}[1]{\textbf{\textit{Key words---}} #1}
+\renewcommand{\abstract}[1]{\textbf{Abstract --- } #1}
+%\jshort{mst}
+
+%\volname{}
+
+%\jvolume{0}
+
+%\jvol{}
+
+%\jissue{0}
+
+%\pubyear{2020}
+
+%\mstype{Article}
+
+%\artid{012}
+
+%\access{}
+\renewcommand{\baselinestretch}{1.5} 
+
+%\captionsetup{font={stretch=3}}
+\newcommand{\othercaption}[1]{\caption{\setlength{\baselineskip}{1.5\baselineskip}#1}}
+
+\begin{document}
+
+\title{Resource uptake and the evolution of moderately efficient enzymes}
+\date{\today}
+\author[,1]{Florian Labourel\thanks{Corresponding author: \texttt{florian.labourel@univ-lyon1.fr}}}
+\author[1]{Etienne Rajon}
+
+ 
+\affil[1]{Univ Lyon, Université Lyon 1, CNRS,
+    Laboratoire de Biométrie et Biologie Evolutive UMR5558,
+    F-69622 Villeurbanne, France}
+
+  \maketitle
+    
+    \abstract{Epistasis is a pervasive phenomenon within biological systems that both influence trajectories followed by Evolution and its steady-state. However, the specific role played by high-dimensional epistasis has mostly remained a conundrum up until now. Here, we put forward a new kind of epistasis - namely, complementary epistasis - and shows how it may change some predictions about mutation-selection-drift balance. We argue that this idea seems well-suited to be studied analytically within a theoretical population genetics framework that remains to be developed. We then discuss how this idea could be tested and how it could broaden our knowledge on both theoretical and applied questions. Then, we focus on the evolution of proteins to show that combined with other biological considerations, this could also help to make predictions about evolutionary rates.}
+
+\keywords{Complementary epistasis, global epistasis, mutation-selection-drift balance, protein evolution, evolutionary rates}
+\vspace{0.5cm}
+
+\section{{Introduction}\label{sec:Intro}}
+
+Living organisms need to uptake and metabolize nutrients, relying on enzymes to catalyse chemical reactions along metabolic pathways. Accordingly, and despite being intrinsically reversible \citep{Haldane30,Klipp94}, \textit{in vivo} enzyme-catalyzed reactions are commonly thought of as an irreversible two-step process \citep{Bar-Even11,Bar-Even15,MichaelisMenten1913,Johnson11}:
+\begin{equation}
+\ce{ E + S <=>[k_{f}][k_{r}] ES ->[k_{cat}] E + P },
+\label{chemMM}
+\end{equation}
+where $k_f$ and $k_r$ are the rates of association and dissociation between enzyme and substrate, and $k_\text{cat}$ is the turnover number, that is the rate of formation of the product $P$ from $ES$ complexes. The first part of this chemical equation describes the encounters between the enzyme $E$ and the substrate $S$; the enzyme will be efficient if $ES$ complexes form often and do not dissociate before the substrate has been turned into a product, which is reflected by the constant $K_\text{M}=\dfrac{k_\text{r}+k_\text{cat}}{k_\text{f}}$. The efficiency $v$ of an enzyme -- the rate at which it makes a product $P$ from $S$ -- depends on these two constants through equation (\ref{EquiBHsimp}):
+\begin{equation}
+v=k_{cat}.[E_\text{tot}].\frac{[S]}{K_\text{M}+[S]},
+\label{EquiBHsimp}
+\end{equation}
+\noindent under the assumption that the concentration $[S]$ is approximately constant and that of $[ES]$ is at steady-state \citep{MichaelisMenten1913, Briggs25}.
+ 
+At first glance, Natural Selection is presumed to optimize enzymatic efficiency by pushing $k_\text{cat}$ upwards and $K_\text{M}$ downwards to universal physical limits. Enzyme efficiencies are for instance limited by the diffusion properties of their aqueous environment, which sets an upper bound of approximately $10^8-10^{10} M^{-1}s^{-1}$ for the ratio ${k_\text{cat}}/{K_\text{M}}$  \citep{Alberty58,Zhou82}. Nearly optimal enzymes indeed seem to exist, as exemplified by triosephosphate isomerase (TIM) whose ratio is close to this theoretical ceiling \citep{Knowles77}. But they are uncommon: most enzymes appear to be only moderately efficient and far off these physical limits -- including enzymes immediately flanking TIM in the glycolysis metabolic pathway \citep{Davidi18}.
+Indeed, \citet{Bar-Even11} have analysed a dataset of several hundreds of enzymes and found a wide diversity among enzyme parameters, thus sketching a puzzling pattern that has far more in common with a zoo than it looks like variations around an archetypal form.\\
+
+This wide distribution of enzyme features could partly be explained by differences between enzyme behaviour \textit{in vivo} and \textit{in vitro}. Such differences are expected, first because diffusion in a test tube is hardly comparable to diffusion in the cytoplasm \citep{Ellis01,Rivas04,Zhou08,Rivas18}. As the cytoplasm gets packed, the cell approaches a state where molecules are less mobile, hindering substrate-enzyme encounters \citep{Muramatsu88,Zimmerman93,Blanco18}. In this regard, $K_\text{M}$ values are likely underestimated \textit{in vitro}, and enzymes should perform less efficiently \textit{in vivo}. Simultaneously, macromolecular crowding can sometimes improve catalytic activity \textit{in vivo}, making specificity constants $k_\text{cat}/K_\text{M}$ higher than their \textit{in vitro} estimates \citep{Ralston90,Ellis01,Jiang07,Pozdnyakova10}. Crowding effects are obviously important for our understanding of enzyme evolution but, alone, they are definitely too weak to explain the wide variability across enzymes insofar as their reported estimates typically lie in the range of one order of magnitude \citep{Davidi16}. \\
+
+Another source of explanation to the observed distribution of enzymes (in)efficiencies is a failure of Evolution to consistently optimize them, possibly due to physical constraints. Indeed, \citet{Heckmann18} have shown how a variety of $k_\text{cat}$s may evolve provided that some of them are physically constrained. Besides the diffusion limit already mentioned, constraints on enzyme evolution might include an intrinsic trade-off \citep{Gudelj10,Stiffler15} that originates from the dependency of both $k_\text{cat}$ and $K_\text{M}$ on intermediate energy profiles \citep{Heinrich91}. Nonetheless, this trade-off is scarcely observable among evolved enzymes -- \citet{Bar-Even11} report a coefficient of determination around $0.09$ for the correlation between $\log_{10}(k_\text{cat})$ and $\log_{10}(K_\text{M})$ -- suggesting that it can be overcome. 
+Other constraints may exist and be specific of a given reaction \citep{Klipp94} -- \textit{e.g.} reaction reversibility -- potentially explaining a part of the variance in enzyme efficiencies.
+It remains that estimating constraints on all individual enzymes appears like a daunting task, which could be guided, in part, by the identification of deviations from evolutionary predictions.\\
+
+
+Following this idea, the premise of our theoretical investigation into the origins of enzyme diversity is that it results mainly from unconstrained evolution, such that the reported differences may be caused by the combined action of selection and genetic drift. It is important to notice that the information we have is partial, as an enzyme's activity is the joint result of its kinetic constants and cellular concentration, perhaps also contributing to the reported variance in the former. In fact, \citet{Davidi16}'s method to determine \textit{in vivo} turn-over rates lends some credence to the idea that increased levels of expression make up for lower kinetic constants \citep{Davidi18}. It is therefore obvious that an enzyme's expression needs to be considered as another dimension of its activity, especially since it has been shown that the evolutionary tuning of gene expression can happen very quickly \citep{Dekel05}.
+
+Concomitantly, an enzyme's activity can be impacted by protein misfolding, which reduces the effective enzyme concentration \citep{Tokuriki09,Yue05,Drummond05,Echave17a} while also impacting fitness by enhancing protein erroneous interactions \citep{Yang12} and the formation of toxic protein aggregates \citep{Bucciantini02,Sabate10,Geiler-Samerotte11}. Protein stability is thus under strong purifying selection to avoid the deleterious effects of misfolding \citep{Drummond08}. Accordingly, it has been shown that proteins have evolved to stand beyond a stability threshold \citep{Bloom05}, although marginally \citep{Taverna02}. 
+
+Because mutations are on average destabilizing, this definitely narrows down the spectrum of adaptive mutations \citep{Shoichet95,DePristo05, Weinreich06,Tokuriki07,Tokuriki08, Lunzer10}. Nevertheless, several studies have reported the existence of a genotype space where activity can be optimized without compromising stability \citep{Schreiber94,Burg02,Bloom04,Knies17,Miller17}. Even when improving function requires the fixation of destabilizing mutations, compensatory mutations can in principle cancel out stability losses arising from active site evolution \citep{DePristo05,Tokuriki08,Tokuriki09,Storz18}. Adaptive evolution may even be facilitated by preexisting mutational robustness against misfolding \citep{Bloom06,Bloom07}. Therefore, although the requirement of a stable, correctly folding protein may sometimes slow down the evolutionary process, it is rather unlikely that stability explains the distribution of enzyme kinetic parameters albeit marginally.\\
+
+
+Enzyme kinetics evolution has often been considered theoretically through the lens of flux control \citep{Burns85,Clark91,Fell92,Kacser95,Yi19}. Indeed, the control of the flux in a metabolic pathway is shared between all enzymes, in what is known as the summation theorem \citep{Kacser73,Heinrich74}. Thence, because the sum of control coefficients must equal 1 within a pathway, if all enzymes have similar kinetic parameters, none of them exerts a strong influence \citep{Dean95}. But if one enzyme departs from this trend and becomes inefficient, it exerts a strong control at the expense of others \citep{Dykhuizen90}. This leads to diminishing-returns epistasis in which the fitness landscape flattens because, as an enzyme becomes more efficient, subsequent mutations have smaller effects \citep{Kacser73,Dykhuizen87,Tokuriki12}, a finding that has since received empirical confirmation \citep{Fell92,Dean95,Lunzer05,Yi19,Chou14}.
+
+\citep{Hartl85} and \citep{Dean86} have considered such a fitness landscape under a population genetics framework to conclude that enzymes may quickly reach a fitness plateau and evolve on nearly neutral landscapes \citep{Ohta92}. Nonetheless, these studies fall short of explaining why inefficient enzymes having stronger control do not evolve higher activities \citep{Yi19}. In these models as in most, an enzyme's efficiency is captured by its activity, generally represented by a composite of $k_\text{cat}$, $K_\text{M}$ and enzyme concentration \citep{Hartl85,Clark91,Chou14,Kaltenbach14}, such that the distinct evolutionary dynamics of these parameters, together with an enzyme's concentration, is ignored. This reduction of an enzyme's dimensionality goes against the empirical observation that each dimension may have a differential impact on fitness in the context of antibiotic resistance \citep{Walkiewicz12,Stiffler15,Rodrigues16} and that each is thus necessary to predict evolutionary outcomes \citep{Walkiewicz12}.\\
+
+Perhaps more importantly, \citep{Heinrich91} and \citep{Schuster08} have pointed out that these modelling frameworks assume a constant value for either or both concentrations of the first substrate and of the final product \citep{Orth10}, whereas Evolution should instead maximize the amount of final products generated. \citep{Klipp94} found that the aforementioned concentrations indeed have a major influence on optimal rate constants under certain assumptions. 
+Likewise, nutrient uptake is most often not considered explicitly in existing models of enzyme evolution, while it is obviously critical in the competition for resources \citep{Dykhuizen94}. 
+
+Nutrient uptake occurs when metabolites move inwards across cell membranes; it may rely on membrane permeability only (passive diffusion) or involve channels and carrier proteins, be they transporters or cotransporters \citep{Stein86a}.
+Here we build a model that explicitly includes passive (PD hereafter) or facilitated diffusion (FD) followed by an unbranched metabolic pathway to study how resource availability coupled to transport modulates the evolution of enzymes along the pathway.
+In ecological scenarios where individuals compete for resources, Natural Selection should favour genotypes that maximize the net intake of molecules and their transformation, which are linked under both PD and FD.
+
+Based on this premise, we confirm that the evolution of enzyme kinetic parameters $k_f$ and $k_\text{cat}$ takes place on cliff-like fitness landscapes where a fitness plateau covers a wide part of the relevant parameter space. Kinetic parameters have co-dependent but distinct evolutionary dynamics -- and thus distinct sensitivities to certain parameters of the model -- such that the shape of the plateau can be modulated by changing parameters of the model within realistic ranges. We show that this fitness landscape depends on features of transporters that initiate a metabolic pathway, along with parameters that vary among enzymes within a pathway, like the tolerance to high concentrations of intermediate metabolites or the reversibility of reactions.
+
+We further demonstrate, using a simple population genetics model, that the evolutionarily expected features of an enzyme should be predictable, even though enzymes evolve near-neutrally on the fitness plateau. This is because the model includes slightly biased mutations that tend to produce a majority of less efficient enzymes. We thus postulate that the wide variety of enzyme features reported might be explained in a large part by differences in the shape of their fitness landscapes. While testing this hypothesis will require extensive information about individual enzymes, we made a small step in this direction, showing that enzymes involved in metabolic pathways with different types of transporters exhibit differences that our model qualitatively predicts.  
+
+\section{Results\label{sec:Results}}
+
+\subsection{Passive diffusion is generally inadequate to sustain cell metabolism}
+
+In the version of our model in which intake relies on passive diffusion (PD), the net uptake of a nutrient is a direct outcome of its concentration gradient, and therefore of how efficiently the first enzyme catalyses its transformation inside the cell. Assuming that fitness is proportional to the flux of product of this reaction, we find that the fitness landscape has a cliff-like shape with fitness increasing steeply as parameters $k_\text{cat}$ and $k_f$ increase (see Supplementary materials, section Text S1). The precise shape will not be commented in detail here, for it is very similar to landscapes obtained under facilitated diffusion (FD, treated in the rest of this manuscript). 
+
+Importantly, our results indicate that PD can only sustain a small part of the metabolism of most living cells given cell permeabilities reported in the literature \citep{Wood68,Milo10}, suggesting that this process may not be a determining factor in the evolution of enzymes along metabolic pathways. Indeed, even extremely efficient enzymes, harbouring values of $k_\text{cat}$ and $k_\text{cat}/K_\text{M}$ close to their physical limits, yield low inward fluxes that approach $10^{-2}~mM.s^{-1}$ when considering a spherical cell with a diameter $D=1 \mu m$. To get a sense of how low these fluxes are, we calculated the maximum cell size they can theoretically sustain. Considering that basal metabolic demands are approximately proportional to the cell volume and using estimates by \citet{Lynch15} for this relationship, we predicted the maximum size enabled by sugar passive diffusion (see \ref{sec:M&M}Materials and Methods). Setting a (conservatively high) medium concentration in glucose $[G]=1$M yields a theoretical volume ceiling $V_{est}=0.84 \mu m^3$. 
+
+Nearly all eukaryotes, and most prokaryotes are \textit{de facto} larger than this threshold \citep{Heim17}, which might help explain the apparent ubiquity of FD. While this demonstration hinges on numbers for sugar uptake, which may arguably be the task requiring the highest flux, PD may be limiting for many other metabolites \citep{Boer10}, depending on their permeability and availability in the environment: even for very high amino-acids concentrations that may only be met in multicellular organisms \citep{Schmidt16} and assuming the highest observed permeability for such metabolites \citep{Chakrabarti94}, these levels are orders of magnitude lower than with FD (see Supplementary material - section Text S1 for PD results). 
+
+\subsection{General shape of the fitness landscape under facilitated diffusion}
+
+For most metabolites, FD relies on the specific binding of the substrate to transmembrane carrier proteins (transporters hereafter), followed by its translocation to the other side of the membrane \citep{danielli1954,Kotyk67,Stein86d}. Our model builds on \citet{Kuile94}'s approach to model FD, considering the simplifying assumption of symmetric transport. Within this framework, FD operates on the concentration gradient \citep{Bosdriesz18} and is susceptible to saturation, represented by constant $K_T$ -- similar to $K_M$ in the Michaelis-Menten equation -- and an interaction constant $\alpha$ (see Methods for details). We assessed how this saturation phenomenon influences the selection pressure acting on forward enzyme kinetic parameters ($k_f$ and $k_\text{cat}$) under various scenarios. 
+
+\begin{figure*}[t!]
+\centering
+\includegraphics[scale=0.47,trim=0cm 0.75cm 0 1cm,clip]{Figures/3DFitLandscape.jpeg} 
+\includegraphics[scale=0.42,trim=0 0cm 0cm 1cm,clip]{Figures/2DFitLandscape.jpeg}  
+\caption{The flux of product following substrate uptake by transporters and conversion by a dedicated enzyme depends on kinetic parameters $k_f$ and $k_\text{cat}$. This landscape is based on a moderately low flux at saturation $V_{Tm}=1 \mu M.s^{-1}$ close to those measured for amino acids and nucleosides in E.\textit{coli} \citep{Zampieri2019}. We also set the transport saturation ratio $[S_\text{out}]/K_\text{T}$ to 10 such that the FD process approaches saturation, and relatively high transporter affinity $K_\text{T}=50\mu M$, also in line with estimates for nucleosides \citep{Griffith96,Xie04}. Other parameter values include $k_r=10^3s^{-1}$ and $[E_{tot}]=1mM$. The color gradient indicates the absolute and normalized (with a maximum flux of $1$) values of equilibrium flux.
+}
+\label{figure3D2DFit}
+\end{figure*}
+
+In order to depict a fitness landscape representative of an average enzyme, we first consider a situation where transporters induce a moderately low rate $V_{Tm}$ and saturate with a relatively high affinity $K_T$ (FIG.~\ref{figure3D2DFit}, notice that affinity increases when $K_T$ decreases). In this situation, the inward flux at steady-state (which, as argued in the introduction, can be considered representative of fitness) forms a plateau when the upstream enzyme in the metabolic pathway has high $k_\text{cat}$ and $k_f$. This low equilibrium flux elasticity coincides with the saturation theory \citep{Wright34, Kacser73,Hartl85,Dykhuizen87,Dean95,Yi19}, especially with its version incorporating facilitated diffusion \citep{Kuile94,Dean95}. The flux plateau is delineated by parallel isoclines (solid and interrupted lines in FIG.~\ref{figure3D2DFit}) oriented in the bottom-right direction of the landscape for intermediate values of $k_\text{cat}$ and $k_f$, such that decreasing $k_f$ by one order of magnitude can be compensated by a similar increase in $k_\text{cat}$. While this mutual dependency holds even for high $k_f$ values as long as $k_\text{cat}$ is not critically low (\textit{i.e.} when $k_\text{cat}>10^{-3}$), it stops when $k_\text{cat}\geq 10^3$, where increasing $k_\text{cat}$ no longer improves fitness. 
+%%% On ne peut pas faire le commentaire suivant en s'appuyant sur la fig 1
+%This negative relationship in a part of the isocline depends on the dissociation rate of enzyme-substrate complexes, $k_r$. As $k_r$ decreases away from $k_{cat}$, the isocline progressively loses this oblique part (Fig.~\ref{figure3D2DFit}), a trend that will be fully appreciated below. 
+Besides, the influence of $k_\text{cat}$ and $k_f$ is not strictly equivalent, since the increase in flux is more gradual in response to $k_f$. 
+ 
+Furthermore, and contrary to the textbook picture whereby most biological reactions are not limited by diffusion at all \citep{Bar-Even11,Sweetlove18}, increasing an enzyme's association rate $k_f$ – be it through its diffusivity or its binding rate – may still enhance the equilibrium flux when diffusion is substantially faster than catalysis.
+
+\subsection{Properties of facilitated diffusion modulate the landscape}
+
+To explore the effect of FD kinetics on the evolution of enzymes in the metabolic pathway, we studied the influence of  $K_T$ -- the affinity of the transporter for the substrate -- and $V_{Tm}$ -- the maximum transport rate -- still assuming that the substrate is close to saturation ($[S_\text{out}]/K_T=10$). We find that increasing the transport flux $V_{Tm}$ exerts a positive selection pressure on kinetic parameters for the upstream enzyme (\textit{i.e.} for increasing $k_\text{cat}$ and $k_f$). The plateau is shifted accordingly (see FIG.~\ref{figure2DSSatStud}-A), towards the top-right corner of the landscape, at a distance that corresponds to the magnitude of the change in $V_{Tm}$. Increasing the affinity of the transporter (\textit{i.e.} decreasing $K_T$), however, selects for higher $k_{f}$ (the isoclines are displaced to the right and the fold change is similar to that of $K_T$) but has no other visible influence on $k_\text{cat}$ than increasing its codependency with $k_f$, a result that holds regardless of the flux at saturation $V_{Tm}$ (notice that we only considered high $V_{Tm}$s, larger than in the average case, because these cases are more likely to be under directional selection). 
+
+This specific effect on the affinity of the upstream enzyme is likely due to a competition between the transporter -- which can transport the substrate in both directions -- and the enzyme, which harvests the substrate at a rate that depends on the dissociation constant $K_D=k_r/k_f$. It should be noted that nutrients under lower demands -- \textit{e.g.} amino acids -- are generally less concentrated in the environment, often coinciding with a higher affinity of their transporter. Therefore, the possible combinations of flux and affinity likely occupy a restricted space of possibilities where flux and affinity are negatively linked \citep{Gudelj10,Bosdriesz18}, which as can be seen in SM Figs.~S3-A,E,I results in landscapes that mainly differ by the minimum value of $k_\text{cat}$ on the plateau. In FIG.~\ref{figure2DSSatStud}-A, we have considered ranges of empirical estimates for sugars (high flux with low to moderate affinity) \citep{Stein86d,Maier02}, nucleosides \citep{Griffith96} and amino acids \citep{Stein86d,Zampieri2019} (weak to moderate flux with moderate to high affinity), which indeed mainly correspond to these combinations.   
+
+
+\begin{figure*}[h!]
+\centering
+
+\includegraphics[scale=0.575,trim=0.5cm -0.3cm 0cm 1.5cm,clip]{Figures/2DFit_Flux_Sat.jpeg}
+\includegraphics[scale=0.575,trim=0.5cm -0.3cm 0cm 1.5cm,clip]{Figures/2DFit_NonSatToSat.jpeg}
+\caption{Features of a transporter have an impact on the flux landscape for upstream enzymes, as shown by the $0.9$ isoclines -- above which the relative flux is $>90\%$ -- that delineate the fitness plateau for each set of parameter. A: low ($K_T=0.1M$) and high ($10\mu M$) transporter affinities are considered, in combination with low ($V_{Tm}=10^{-6} M$), moderate ($10^{-4.5} M$) or high maximum flux ($10^{-3} M$). Increasing $K_T$ extends the plateau only towards the left part of the landscape, allowing enzymes with lower $k_f$ on the plateau, whereas decreasing $V_{Tm}$ extends the plateau in both directions. B: the shape of the fitness plateau is however little dependent on the saturation of the transporter, for a transporter with moderate flux ($V_{Tm}=10^{-4.5}M.s^{-1}$; the effect is identical for higher $V_{Tm}$, see SM Fig. S2). Other parameter values: $k_r=1000/s$, $[E_{tot}]=1mM$ and $[S_{env}]=10 \times K_T$.}
+\label{figure2DSSatStud}
+\end{figure*}
+
+So far we have considered transporters saturated by high external substrate concentrations. Relaxing this assumption has little impact on the fitness landscape, except that very low values of $k_\text{cat}$ (lower than $10^{-2}$ in FIG. \ref{figure2DSSatStud}-B) can only sustain the low influx of transporters far from saturation, but fail to keep up with higher influxes in richer environments. 
+
+\subsection{Enzymes differ among metabolic pathways}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.55,trim=0cm 0cm 0cm 1.5cm,clip]{Figures/2DFitContour_DataClasses.jpeg}  
+\othercaption{\textit{in vitro} experimental estimates of kinetic parameters $k_\text{cat}$ and $k_\text{cat}/K_\text{M}$ exhibit different distributions for enzymes involved in different categories of pathways -- as identified by \citet{Bar-Even11} -- namely (AFN): amino acids, fatty acids, and nucleotides and (CE): carbohydrates and energy. Corresponding fitness landscapes -- differing by transporter features -- are superimposed, with the parameter space narrowed down due to the diffusion limit (grey area, set for $k_r=10^2 s^{-1}$). The isoclines shown correspond to parameter values typical of sugar transporters ($K_T=5mM$,$V_{Tm}=1mM.s^{-1}$, in red) \citep{Maier02} or amino acids transporters (same as in FIG.~\ref{figure3D2DFit}, in black).}
+\label{figure2D_BarEven_Dataset}
+\end{figure}
+
+We then superimposed empirical estimates of kinetic parameters over our theoretical fitness landscapes, after substituting parameter $k_f$ for its usual empirical counterpart, $k_\text{cat} / K_\text{M}$. Because $k_{cat}/K_\text{M} = k_fk_{cat}/(k_r+k_{cat})$, this approximation only holds when $k_\text{cat} \gg k_r$. Representing the fitness landscape in this parameter space
+sets an inaccessible area in the bottomright part of the landscapes where $k_f$ would exceed the diffusion limit (grey area on FIG.~\ref{figure2D_BarEven_Dataset}). For purposes of inclusiveness, we used $k_r=10^{2}s^{-1}$ by default -- noting that this limit would be displaced upwards for larger $k_r$ (and downwards otherwise).
+
+We otherwise used sets of parameters that correspond to typical features of sugar and amino acid/nucleoside transporters to obtain FIG.~\ref{figure2D_BarEven_Dataset}. Because we have previously shown that changing the affinity or maximum flux of transporters may move the fitness plateau, our model predicts that enzymes involved in the corresponding pathways (\textit{e.g.} of sugars and amino acids) should have their own specific distributions. We see that enzymes involved in the central carbohydrate metabolism as categorized by \citet{Bar-Even11} have on average higher $k_\text{cat}$ and $K_\text{M}$ than those metabolising amino-acids and nucleotides. Our superimposition with the predicted fitness plateaus in FIG.~\ref{figure2D_BarEven_Dataset} suggests that there may indeed be an explainable difference between enzymes contributing to carbohydrate processing (in red) and to that of other primary metabolites (in black, \textit{e.g.} amino acids).
+We acknowledge that this result implicitly suggests that enzymes within a pathway have evolved on a common fitness landscape, spreading neutrally onto the fitness plateau. This is by no means our interpretation, as this subset of the full dataset includes enzymes that differ in many other ways that, as we will see, make each enzyme evolve on its own fitness landscape and thereby potentially explain a large part of this observed variance. 
+
+\subsection{Downstream enzymes also evolve on cliff-like fitness landscapes}
+
+\begin{figure*}[t!]
+\centering
+\begin{minipage}[c]{0.48\linewidth}
+\includegraphics[scale=0.65,trim=0cm 0cm 0cm 1.5cm,clip]{Figures/2DFitLandscape_etahigh_noreverse.jpeg} 
+%\includegraphics[scale=0.5]{Figures/2DFitLandscape_etahigh_noreverse.png} 
+\end{minipage} \hfill
+\begin{minipage}[c]{0.48\linewidth}
+\includegraphics[scale=0.65,trim=0cm 0cm 0cm 1.5cm,clip]{Figures/2DFit_Landscape_2Enz_First_Enz_Influence.jpeg} 
+\end{minipage}
+\caption{Downstream enzymes exhibit similar fitness landscapes as those upstream, with a dependency to degradation parameter $\eta_d$. A: a high degradation rate ($\eta_d=10^{-2} /s$) results in a fitness plateau for the second enzyme very similar to that of the first enzyme ; in the case presented the first enzyme is considered ``perfect'' in order to draw the fitness landscape of the second enzyme ($k_f=10^{10}M^{-1}.s^{-1}$, $k_{cat}=10^6s^{-1}$, $k_r=10^3s^{-1}$, $[E_{tot}]=1mM$). B: decreasing the degradation rate allows less efficient enzymes (with lower $k_\text{cat}$ or $k_f$) to reach the fitness plateau. Considering the first enzyme to be inefficient ($k_f=10^{2}M^{-1}.s^{-1}$, $k_{cat}=10^{-2}s^{-1}$, $k_r=10^3s^{-1}$) instead of perfect marginally changes the fitness landscape by making organisms tolerant to extremely low $k_\text{cat}$. Other parameter values are identical to FIG.~\ref{figure3D2DFit} (findings are relatively similar for sugar-like transporters, as reported in SM - Fig. S6).}
+\label{figure2D_2Enz_Deg}
+\end{figure*}
+
+One of the factors that makes enzymes different along a pathway is their position, such that the fitness landscape in FIG.\ref{figure3D2DFit} may only hold for the most upstream enzyme in a pathway. Indeed, because the flux of the first product in a pathway increases with the substrate gradient across the cell membrane, the upstream enzyme of a given metabolic pathway is selected for efficiency as described above. In contrast, this selection pressure does not apply directly downstream; at steady-state, even inefficient enzymes can in principle process newly formed substrate molecules at an elevated rate, assuming that the concentration of the substrate is allowed to reach any steady-state value. This is an obviously unreasonable assumption, since a part of this standing substrate should be lost by outward diffusion or degradation \citep{Jones15,Bosdriesz18}. The loss of fitness may therefore result from the loss of metabolites in a way that can be modelled by a constant degradation rate $\eta_{d}$ \citep{Chou14} (assuming that the external environment is infinite, the degradation term can as well represent an efflux). Highly concentrated metabolites may also be involved in widespread non-specific \citep{Keller15} or promiscuous interactions \citep{Khersonsky10,Schauble13,Peracchi18} that may interfere with other cellular processes; this is well captured by the linear cost as non-specific interactions should follow Michaelis-Menten kinetics albeit with much lower affinities, hence following an approximately linear relationship up to very high cellular concentrations (see Materials and Methods for more details). However for some reactions the accumulation of metabolites may result in the production of toxic compounds \citep{Lilja17, Niehaus20}, hence triggering toxicity best modelled as a non-linear fitness cost \citep{Clark91,Wright10}.
+
+We first consider a ``perfect", highly concentrated upstream enzyme ($k_f=10^{10}M^{-1}s^{-1}$, $k_{cat}=10^6s^{-1}$, $k_r=10^3s^{-1}$, $[E_{tot}]=10^{-3}M$) and focus on the second enzyme in the pathway, showing that it evolves on a fitness landscape that has a similar shape than described above, still hitting a plateau (FIG.~\ref{figure2D_2Enz_Deg}, with the same parameterization as FIG.~\ref{figure3D2DFit}). The degradation rate creates a ceiling for the concentration of the product of the first reaction, such that reducing $\eta_{d}$ allows for higher concentrations (see SM Fig. S4) and makes the flux tolerant to second enzymes with lower $k_f$s, whereas selection on $k_\text{cat}$ is barely impacted by this parameter. The plateau is therefore extended to the left when high product concentrations are enabled at low $\eta_{d}$ (see FIG.~\ref{figure2D_2Enz_Deg}-B). The shape of the plateau is little impacted by changes in the efficiency of the first enzyme, especially when it stands on the plateau. These results are almost independent of the transporter initiating the pathway 
+(see SM Fig. S6 for the case of moderate affinity, high flux transporters). 
+
+The shape of the negative relationship between metabolite concentration and fitness can be important (Figs~S7-S9 in SM), as it can make the fitness landscape of an enzyme dependent of the overall flux of the metabolic pathway, and therefore on other enzymes in the pathway. Indeed, low general fluxes (as modelled by an inefficient first enzyme in Figs. S7-S8) make the metabolite concentration below its toxicity threshold, therefore making organisms tolerant to enzymes with lower $k_f$ and $k_\text{cat}$. Taken together, these results show that the precise epistatic relationship between enzymes in a pathway will depend on the exact cost function applied, with a linear cost generating epistasis for $k_\text{cat}$ only and a non-linear cost possibly impacting both $k_f$ and $k_\text{cat}$. 
+\subsection{The reversibility of reactions also matters}
+
+Reversibility is an intrinsic feature of chemical reactions that cannot be directly overcome by Evolution \citep{Haldane30,Cornish-Bowden79a}. A highly reversible reaction corresponds to a large intrinsic equilibrium constant $K_{eq}=[S]_{eq}/[P]_{eq}$ \citep{Klipp94}, and results in higher backward than forward rates in the following chemical equation: \begin{equation}
+\ce{ E + S <=>[k_{f}][k_{r}] ES <=>[k_{cat}][k_{inh}] E + P_1 },
+\label{chemMM_fullrev}
+\end{equation}
+where $k_{inh}$ represents the rate at which enzyme and product combine back. Such a (reversible) reaction could in principle influence the selective pressure acting on the following enzyme in the pathway, for both enzymes compete to process the same metabolite $P_1$. We thus quantified how reversibility affects the evolution of an enzyme downstream (SM Figs S10 and S11). 
+
+The equilibrium constant $K_{eq}$ has a similar (non-linear) impact on the fitness landscape of the second enzyme to that of the degradation rate, with a highly reversible upstream enzyme exerting a selection pressure downstream towards an increase of kinetic parameters (SM Fig. S10-A). Indeed, increasing $K_{eq}$ moves the fitness plateau toward the upper-right corner in the ($k_f$, $k_\text{cat}$) parameter space, hence selecting for more efficient downstream enzymes. The effect appears linear, except for very low values of $K_{eq}$ where metabolite accumulation exerts a dominant role in shaping the fitness landscape (through the degradation rate $\eta_d$, set to a low residual value). Therefore, the reversibility of the upstream reaction appears like a critical parameter for the evolution of an enzyme. 
+
+
+\subsection{Evolutionary dynamics of enzyme kinetic parameters}
+
+\begin{figure*}[h!]
+\centering
+\begin{minipage}[c]{0.5\linewidth}
+\includegraphics[scale=0.65,trim=0.25cm 0cm 0.5cm 1.5cm,clip]{Figures/2DFitLandscape_Evo_Results_lowF_withbias_Def.jpeg} 
+\end{minipage} \hspace{0.5cm}\hfill
+\begin{minipage}[c]{0.46\linewidth}
+\includegraphics[scale=0.65,trim=0cm 0cm 3.5cm 1.5cm,clip]{Figures/2DFitLandscape_Evo_Results_highF_withbias_Def.jpeg} 
+\end{minipage}
+\caption{Population genetic simulations predict that enzymes should reach a predictable set of features when mutation biases towards lower efficiencies are considered (see SM  fig. S17 for the case of an absence of bias). Indeed, the mutation selection drift equilibrium establishes close to an isocline indicative of effective selection that depends on the effective population size $N_e$. The cases considered here are that of a transporter with a low flux at saturation and high affinity (A; $V_{Tm}=1\mu Ms^{-1}$ and $K_T=10\mu M$) and one with a high flux at saturation but low affinity (B; $V_{Tm}=1mMs^{-1}$ and $K_T=100mM$) with effective population sizes ranging from $10^2$ to $10^5$ (different colors) and two strengths of the mutational bias (the absence of mutational bias was also considered, see SM). Each of 30 independent simulations for each scenario is represented a dot in the ``empirical" parameter space ($k_\text{cat}, \;k_\text{cat}/K_M$), but only $k_\text{cat}$ and $k_f$ were susceptible to evolve. $k_r$ is set to $10^3s^{-1}$ such that the grey part of the parameter space is inaccessible to enzymes that would otherwise exceed the diffusion limit. 
+}
+\label{figure2D_Evolutionary_results}
+\end{figure*}
+
+How much variance in evolutionary outcomes these differences in fitness landscapes may explain is contingent on the interplay between selection, mutation and drift. Small differences in an isocline position should indeed be of little importance if populations perform random walks on the fitness plateau, for instance. To approach how populations evolve on our mathematically derived fitness landscapes, we built a simple population genetics model in which absolute fitness is directly proportional to the flux arising from the first enzyme at steady-state -- which itself equals the net inward flux of nutrients. Two different levels of metabolic demands were considered, corresponding to parameter values of amino acids/nucleosides and sugar transporters (panels (A) and (I) in SM Fig. S3). In this instance of the model, only $k_\text{cat}$ and $k_f$ were susceptible to evolve through mutations. Mutational effects on $\log_{10}k_{cat}$ and $\log_{10}k_f$ were drawn from independent normal distributions with mean $b \leq 0$, and the absolute value of $b$ setting the intensity of a mutational bias towards less efficient parameter values, as has been widely documented in many contexts \citep{EyreWalker07,Serohijos12,Heckmann18}. The standard deviation of the distribution of mutational effects equals $0.3$ such that most mutations explore the neighbouring parameter space,  seldom changing a parameter by more than one order of magnitude (one $\log_{10}$ unit) in compliance with empirical estimates \citep{Carlin16}. Since the relation between kinetic parameters may be constrained -- \textit{e.g.} due to shared properties of the energy profile of a reaction -- we tested the influence of negative and positive relationships using bivariate normal distributions, with three different values of $\rho$ (see Materials and Methods for details). 
+
+In the absence of mutational bias ($b=0$), simulated enzymes spread over the fitness plateau, as expected (Fig.~S16-A for low flux, Fig.~S17A otherwise). The onset of the plateau depends on the strength of drift and hence derive from the effective population size $N_e$, following the classical expectation that selection becomes inefficient when $N_e \times s < 1$ \citep{Wright31,Kimura68}. Introducing a mutational bias that makes enzyme kinetics less efficient on average has a strong effect on both $k_\text{cat}$ and $k_f$, preventing simulated enzymes from improving far above the drift barrier (FIG.~\ref{figure2D_Evolutionary_results}-A for low flux, FIG.~\ref{figure2D_Evolutionary_results}-B otherwise). 
+Even weak biases ($b=-0.1$) lead to enzymes evolving in the vicinity of the isocline where $N_e \times s \approx 1$. Increasing the strength of this bias to $0.2$ only slightly decreases the population variance around this expectation. Finally, mutational correlations do not impact much the distribution of evolutionary outcomes (SM Fig. S18).
+
+Our results suggest a strong effect of the effective population size on enzyme evolution, such that species with $N_e$ above $10^5$ \citep[most unicellular organisms]{Bobay18} should express extremely efficient enzymes. This appears to not be the case, as for instance Eukaryotes and Prokaryotes display similar enzymes despite large differences in effective population sizes \citep{Bar-Even11}. As we will later discuss, this conundrum might resolve when considering the smaller size of organisms forming large populations, making them more sensitive to noise in gene expression and favouring higher concentrations. 
+Notwithstanding this issue, the prediction of enzymes evolving a predictable set of kinetic parameters strongly suggests that a large part of the broad variance in enzyme features is due to differences in the selective context experienced by each, thereupon requiring further investigation on the dependency of the position of the fitness plateau to parameters of our model.
+
+\subsection{The joint evolution of enzyme concentrations and kinetic parameters}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.62,trim=0.25cm 0cm 0cm 1cm,clip]{Figures/Evo_Results_CostCrow_PaperModM.jpeg}
+\caption{Simulations of the joint evolution of enzyme concentration and kinetic parameters, with a twofold cost of enzyme overexpression (the direct metabolic cost and the indirect cost of cell packing). The case considered here is that of a transporter with a high flux at saturation and low affinity ($V_{Tm}=1 mMs^{-1}$ and $K_T=1mM$) under a high mutational bias on kinetic constants ($b=-0.2$). Two different costs of protein production $c$ are considered along with four effective population sizes ranging from $10^2$ to $10^5$. We ran 30 independent simulations for each scenario, each represented by a dot in the ``empirical" parameter space as described in fig.~\ref{figure2D_Evolutionary_results}.
+}
+\label{figure2D_Evolutionary_results_HF}
+\end{figure}
+
+Hitherto, we have considered enzymes to be highly concentrated, an assumption that we now relax since it is an important component of the presumed kinetic activity \citep{Koshland02}. Predictably, increasing the concentration of the first or second enzyme in a pathway releases the selection on their kinetic parameters \citep{Noor16}, producing larger fitness plateaus as an enzyme concentration increases (see SM - Figs S12-B and S13-B for this influence in different contexts). Due to the compensatory effects between concentration and activity, we anticipate that the joint evolutionary dynamics of the concentration and kinetic parameters should yield a negative correlation between them, as reported by \citet{Davidi16,Davidi18}. 
+
+Despite their common role on reaction efficiency, enzyme concentration expectedly responds to very different selection pressures than kinetic parameters, as increased gene expression levels come with costs \citep{Wagner05,Lang09,ScottM10,Noor16,Kafri16}. Indeed, producing extra proteins requires both energy and matter \citep{Novick57,Stoebel08,Wagner05,Lynch15} and may impede the efficiency of physical processes that rely on an optimal intermediate content \citep{Dong95,Dill11,Andrews20}. We designed a new instance of our population genetics model to study the tangled evolution of kinetic constants and enzyme concentration, introducing two of these costs: (1) the cost of producing proteins $c$, considered to be proportional to concentration \citep{Wagner05,Chou14,Lynch15}, and (2) the exponential cost of an increase in macromolecular crowding, which hinders diffusion and thus slows down reactions \citep{Dill11,Schavemaker18,Andrews20} 
+% when cellular concentrations go beyond a threshold $[Proteome] \approx 3-4 mM$ 
+(see SM Fig. S15 for the resulting fitness landscapes of enzyme concentration).
+
+The two types of costs result in a different shape of the fitness landscape, with the noticeable difference that evolutionarily expected concentration depends on $N_e$ when the cost of production is considered (SM - Fig. S19) but not with crowding effects (SM - Fig. S20). With a combination of the two costs, enzyme concentrations decrease with $N_e$ and production costs, resulting in the evolution of higher kinetic constants (FIG. \ref{figure2D_Evolutionary_results_HF}). This is because at higher effective sizes, direct costs of protein production are large enough to incur effective selection for lower protein expression. This is no longer the case when $N_e$ decreases, such that the major force driving the optimization of enzyme concentration becomes that opposing macromolecular crowding, which is less sensitive to $N_e$ (as shown in Fig. S19 in SM). The balance between these two selective forces, and the dependency to $N_e$, obviously depend on the relative importance of these costs (SM - Fig. S20), itself depending on many parameters (protein length, molecular weight, etc.) that should only make enzymes marginally different within a given species (when their activity evolves on similar fitness landscapes).
+
+\section{Discussion\label{sec:Discussion}}
+
+Most enzymes have been considered to be only moderately efficient \citep{Bar-Even11}, if not sloppy \citep{Bar-Even15}. This claim was put into perspective by \citet{Newton18} who argued that the link between fitness and enzyme efficiencies is complex and may be partly enzyme dependent, such that all enzymes may not evolve on a common fitness landscape. Through this work, we have developed a model where enzyme efficiencies are mechanistically linked to fitness through the impact of nutrient gradients on the production of metabolites. Our results emphasize that an enzyme's fitness landscape -- and the resulting mutation-selection-drift balance -- may indeed be largely context dependent, possibly explaining a large part of the extreme observed variance in enzyme features.
+
+At first sight, all enzymes evolve on fitness landscapes that have the same general shape, with a fitness plateau surrounded by a steep slope. While this shape is usual in models of enzyme evolution \citep{Hartl85,Kaltenbach14,Yi19}, in our model the landscape is drawn in the parameter space formed by the two forward kinetic parameters $k_\text{cat}$ and $k_f$, instead of a composite ``efficiency'' whose relevance is questionable \citep{Eisenthal07,Koshland02}. Our model allows to predict the precise position of the fitness plateau in various contexts, showing that model parameters may have a selective impact on $k_f$, $k_\text{cat}$, or both, thereby confirming the relevance of considering their distinct evolutionary dynamics. 
+
+We have shown that the exact position of the plateau is important through a population genetics model including mutational biases that produce less efficient enzymes at a slightly higher frequency. Despite their small effect, these biases are sufficient to have a significant impact on the evolutionary dynamics occurring on the fitness plateau, preventing enzymes to explore the parameter space far away from an isocline whose precise value can be predicted. Because the mutation-selection-drift balance occupies a narrow part of the landscape, this makes the evolution of an enzyme, in principle, highly predictable. Likewise, we anticipate that differences between enzymes should largely be explained by differences in the shapes of their individual fitness landscapes. 
+
+Overall, the selective pressure acting on an enzyme results from an interplay between several biochemical factors. We have effectively found that the shape of the fitness landscape is first governed by features of the transporter initiating a pathway, especially the maximum flux they can sustain. Using parameters that correspond to empirical estimates for sugars and amino acids/nucleosides, we have found that enzymes contributing to subsequent metabolic pathways should be different, with those in the ``sugars" pathway being selected for faster kinetics.
+
+While sharing a common transporter, enzymes along a pathway are also subject to a variety of local chemical contexts, making each evolve on its own unique fitness landscape. This could explain, at least in part, the large within-pathway variance of enzyme kinetic parameters. Physical constraints may for instance act differentially on different enzymes, as exemplified by the intrinsic reversibility of a reaction that fuels the selective pressure towards higher efficiency in downstream enzymes. This may contribute to explain the high efficiency of a few enzymes like TIM %, and thereby why there exists some ``equilibrium enzymes" pushing reactions close to their chemical equilibrium 
+\citep{Williamson67,Davidi18}.
+
+One way to compensate for low kinetic constants is to enhance the level of expression of an enzyme, as confirmed by our model -- concentration indeed has a strong influence on the fitness landscape of $k_f$ and $k_\text{cat}$. Nonetheless, concentration and kinetic parameters face very distinct selection regimes: while the latter are both under directional selection, vanishing at high efficiencies, concentration is under stabilizing selection -- owing to a combination between its positive impact on the flux and the adverse costs to high expression -- as already pinpointed by \citet{Chou14}. Their joint evolution is complex because the position of the concentration optimum depends on an enzyme's kinetic constants, whose fitness landscape itself depends on concentration. This results in a slightly increased variance in enzyme efficiencies compared to simulations with fixed concentrations, along with a complex relationship with genetic drift, because small populations tend to tolerate higher enzyme concentrations and, therefore, evolve less efficient enzymes.
+
+It should be noted that our model does not consider another selection pressure on enzyme concentrations that arises from noise in gene expression, as argued by \citet{Wang11}. Indeed, low expression results in detrimental noise that should be avoided by pushing enzyme concentrations towards higher values in small organisms like Prokaryotes (see SM section Text S6 for an estimate of this effect). This could result in a different relationship between $N_e$ and enzyme efficiencies than considered here, possibly explaining the confusing observation that species with larger populations (and smaller sizes) do not express markedly more efficient catalysts. Furthermore, an enzyme's effective concentration can also increase through compartmentalization \citep{Ovadi04,Diekmann13,Cornejo14} and substrate channeling \citep{Welch94,Huang01,Sweetlove18}, within the limits imposed by noise, and modify the selective pressure acting on kinetic parameters.
+
+This illustrates that rather than making precise predictions, our study aims at making the strong claim that selection acting on enzyme features is important for their diversity, possibly largely overcoming the diversity arising from neutral processes. If this is indeed the case, trends in enzyme evolution can be predicted -- as it was shown empirically in the context of antibiotic resistance \citep{Walkiewicz12} -- and further improvements of this model should allow to predict the expected features of individual enzymes. Such improvements are made easier by the use of a mechanistic framework, where fitness arises as enzymatic efficiency helps ingesting nutrients and win the competition for resources. This framework could even be enriched by other dimensions relevant to the genotype-phenotype-fitness map \citep{Bershtein17,Echave19,Kinsler20}. 
+
+Unfortunately, mechanistic does not mean free of a definition of fitness, as we have here assumed that the latter is proportional to metabolic flux, hence considering each flux in isolation. Fitness instead results from a wide range of metabolic pathways that combine together and should all be competitive to certain degrees. How global epistasis builds up \citep{Weinreich13,Otwinowski18,Reddy20}, and genetic drift acts in this context, is far from obvious \citep{Iwasa04,Weinreich05,Weissman09}. But this should not impact much how enzymes evolve in old, overall efficient pathways, as any impediment in efficiency should have a relatively independent effect on fitness in this context, as captured by our model. Understanding these complex interactions between pathways would nevertheless be crucial to understand how metabolic pathways arose and improved, likely from a highly inefficient state during early steps in the evolution of life on Earth \citep{Kacser84,Schmidt03,Heckmann18}.
+
+\section{Materials and Methods\label{sec:M&M}}
+
+\subsection{Quantifying the maximum size for cells using passive diffusion}
+
+If a cell is to be viable, it has, at least, to uptake enough glucose to compensate for basal metabolism -- metabolism that allows to maintain the same cell size for non-actively growing cells \citep{Lynch15} -- leading to the following equation: $\phi_{PD}=C_M$, with $\phi_{PD}$ the uptake through passive diffusion and $C_M$ the basal metabolism demand. To calculate the maximum size a cell can reach using only passive diffusion, we relied on the formula $C_M=0.39V^{0.88} (10^9 ATP/hr)$ estimated in \citep{Lynch15}. We also assumed the cell to be of spherical shape, both concentrations -- inside and outside the cell -- to be constant with the cellular concentration staying so low that it can be overlooked, meaning that the uptake resulting from passive diffusion can merely be written as $\phi_{PD}=P.[S_{\text{out}}].\frac{SA_{\text{sphere}}}{V_{\text{sphere}}}$, where $SA_{\text{sphere}}$ and $V_{\text{sphere}}$ are the surface area and the volume of a sphere, and $P$ represents the cell permeability and was measured to $10^{-6}\mu m^{-1}$ \citep{Wood68} for glucose. Finally, we considered that each glucose yields 30 ATP molecules \citep{Rich03}. 
+
+\subsection{Flux sustained by the first enzyme}
+
+When assessing the flux of product made by the first enzyme in a pathway, both (PD) and (FD) result in similar sets of equations; we focus on FD here (see Text S5 - Mathematical appendix in Supplementary material for a comparison with PD). FD typically relies on the specific binding of substrate molecules -- located outside the cell -- by transmembrane carrier proteins, followed by their translocation into the cytoplasm \citep{danielli1954,Wilbrandt61,Kotyk67,Bosdriesz18}. This specific process obeys Michaelis Menten-like kinetics when transport is assumed to be symmetric \citep{Kotyk67}, which can be modelled through Briggs-Haldane equations \citep{Briggs25,Haldane30,Stein86d}:
+
+\small
+\begin{equation}
+\frac{d[S_\text{in}]}{dt}=V_{Tm}.\frac{[S_\text{out}]-[S_\text{in}]}{K_T+([S_\text{out}]+[S_\text{in}])+\alpha.\frac{[S_\text{out}][S_\text{in}]}{K_T}}
+\end{equation}
+\normalsize
+
+with:
+\small
+\begin{equation*}
+  \left\{
+      \begin{aligned}
+		&V_{Tm}\text{: the maximum rate of a given carrier protein;}\\
+		&K_T\text{: a constant inversely proportional to the transpor-}\\
+		&\text{  ter efficiency};\\
+		&\alpha \text{ : the Kotyk interactive constant  capturing the dis-}\\
+		&\text{  equilibrium between bound and free transporters.}
+      \end{aligned}
+    \right.
+\end{equation*}
+\normalsize
+
+By construction, $\alpha$ cannot exceed 1 \cite{Kotyk67} and is close to this upper limit for sugars (\textit{e.g.} $\alpha=0.91$ for glucose \citep{Teusink98}, so we set $\alpha=1$ by default in this study, maximizing the effect of interaction).
+
+A model including both FD and irreversible substrate conversion by an enzyme therefore corresponds to the following chemical equation:
+
+\begin{equation}
+\footnotesize
+\schemestart
+ S$_{out}$
+ \arrow{<=>[$V_{Tm},K_T$][$\alpha$]}
+ S$_{in}$ + E
+ \arrow{<=>[$k_{f}$][$k_{r}$]}
+ ES
+ \arrow{->[*0$k_{\text{cat}}$]}
+ E + P$$
+\schemestop
+\label{chemMMT1R}
+\end{equation}
+
+Using analytical tools (see \citet{Kuile94} and \citet{Bosdriesz18}, rederived in Supplementary material - Text S5 Mathematical appendix), the flux can be determined through the following set of equations:
+
+\vspace{-0.25cm}
+\small
+\begin{align}
+\strut
+[ES]^*=\frac{k_f[S_{in}]^*}{k_{r}+k_{cat}+k_f[S_\text{in}]^*}.[E_{tot}]\\
+v=\frac{d[P]}{dt}=k_{cat}[ES]^*
+\end{align}
+
+\normalsize
+where:
+\vspace{-0.25cm}
+
+\small
+\begin{align}
+[S_\text{in}]^*=\frac{-b+\sqrt{b^2-4ac}}{2a}
+\end{align}
+
+\normalsize
+with:
+\small
+\begin{equation}
+  \left\{
+      \begin{aligned}
+        a&=k_f k_{cat}[E_{tot}](1+\frac{[S_{out}]}{K_T})+k_fV_{Tm}\\
+		b&=k_f k_{cat}[E_{tot}]([S_{out}]+K_T)+(k_{cat}+k_r-k_f[S_{out}])V_{Tm}\\
+		c&=-V_{Tm}[S_{out}](k_r+k_{cat})\\
+      \end{aligned}
+    \right.
+\end{equation}
+
+\normalsize
+
+\subsection{Multiple enzymes model}
+
+In order to study the evolution of downstream enzymes, we considered an unbranched metabolic pathway in which the product formed by the first reaction serves as the substrate for a second reaction whose flux determines fitness. Theoretically, as there is nothing prohibiting increase in product concentrations -- for it is not considered reversible at this point -- any second enzyme should be able to sustain any metabolic demand. We penalized large increases in cellular concentrations through a degradation process of the product of the first reaction, occurring at rate $\eta_d$ ($\times$ this concentration). 
+The chemical reactions occurring after uptake (Michaelis Menten part of Eq.\ref{chemMMT1R}) are described by the following equations:
+
+\small
+\begin{align}
+\schemestart
+ S$_{in}$ + E$_1$
+ \arrow{<=>[$k_{f1}$][$k_{r1}$]}
+ E$_1S$
+ \arrow{->[*0$k_{\text{cat}1}$]}[0]
+ E$_1$ + P$_{1}$
+ \schemestop
+ \label{chemMMT1R_deg}
+ \end{align}
+ \begin{align}
+ \schemestart
+ P$_{1}$ + E$_2$
+ \arrow{<=>[$k_{f2}$][$k_{r2}$]}
+ E$_2$P$_1$
+ \arrow{->[*0$k_{\text{cat2}}$]}[0]
+ E$_2$ + P$_{2}$
+ \arrow(@c1--){->[*0$\eta_d$]}[-90]
+ P$_{1out}$
+\schemestop
+\label{chemMMT2R_deg}
+\end{align}
+
+\normalsize
+Such a system may reach a steady-state at which the cellular concentrations of the substrate $S_{in}$ and of the first product $P_1$ are constant. At this point, the net instantaneous uptake of substrate equals the instantaneous production of $P_1$ which, in turn, equals the sum of the instantaneous amount of degraded $P_1$ and the instantaneous production of $P_2$, according to the principle of mass conservation. It yields the following system of equations:
+
+\footnotesize
+
+\begin{equation}
+		\begin{aligned}
+V_{Tm}.&\frac{([S_{out}]-[S_{in}])}{K_T+([S_\text{out}]+[S_\text{in}])+\alpha.\frac{[S_\text{out}][S_\text{in}]}{K_T}}=V_{m1}.\frac{[S_{in}]}{K_{M1}+[S_{in}]}
+		\end{aligned}
+		\label{mathMMT1R_deg}
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+V_{m1}.&\frac{[S_{in}]}{K_{M1}+[S_{in}]}=V_{m2}.\frac{[P_1]}{K_{M2}+[P_1]}+\eta_d.[P_1]
+		\end{aligned}
+		\label{mathMMT2R_deg}
+\end{equation}
+
+\normalsize
+\noindent where appear the traditional Michaelis-Menten kinetic parameters for the (i$^{eth}$) reaction:
+
+\small
+\begin{equation*}
+  \left\{
+      \begin{aligned}
+		&V_{m_i}=k_{cat_i}[E_{tot_i}]\\
+		&K_{M_i}=\frac{k_{r_i}+k_{cat_{i}}}{k_{f_{i}}}
+      \end{aligned}
+    \right.
+\end{equation*}
+
+\normalsize
+To test the potential influence of toxicity, we defined the absolute fitness as a function of both the flux and a toxicity factor whose influence is represented through a sigmoid function and reflects the non-linearity nature of toxic effects \citep{Clark91,Wright10}: $f=\phi(1-\frac{[P]}{[P]+T})$
+
+In an independent section, we also introduced reversibility through the modification of equation (\ref{chemMMT1R_deg}), which becomes:
+
+\small
+\begin{align}
+\schemestart
+ S$_{in}$ + E$_1$
+ \arrow{<=>[$k_{f1}$][$k_{r1}$]}
+ E$_1S$
+ \arrow{<=>[*0$k_{\text{cat}1}$][$k_{inh1}$]}[0]
+ E$_1$ + P$_{1}$
+ \schemestop
+ \label{chemMMT1R_degrev}
+ \end{align}
+ 
+\normalsize
+Such a phenomenon is described by the more general form of Haldane equation \citep{Haldane30,Cornish-Bowden79a}, which changes the contribution of the first reaction ($V_{m1}.\frac{[S_{in}]}{K_{M1}+[S_{in}]}$) in both equations (\ref{mathMMT1R_deg}) and (\ref{mathMMT2R_deg}) to:
+
+\footnotesize
+\begin{equation*}
+		\begin{aligned}
+		V_{m1^{+}}.&\frac{[S_{in}]}{K_{M1^{+}}+[S_{in}]+K_I [P_1]}-V_{m1^{-}}.&\frac{[P_1]}{K_{M1^{-}}+[P_1]+[S_{in}]/K_I}
+		\end{aligned}
+		\label{mathMMT1R_rev}
+\end{equation*}
+\normalsize
+with $V_{m1^{+}}$ and $K_{M1^{+}}$ respectively correponding to the previous $V_{m1}$ and $K_{M1}$, while:
+
+\small
+\begin{equation*}
+  \left\{
+      \begin{aligned}
+		&V_{m1^{-}}=k_{r1}[E_{tot1}]\\
+		&K_I=k_{inh1}/k_{f1}\\
+		&K_{M1^{-}}=K_{M1^{+}}/K_I
+      \end{aligned}
+    \right.
+\end{equation*}
+
+\normalsize
+To solve these systems %, which are not easily tractable analytically -- for they rely on cubic equations -- 
+we implemented the Newton method \citep{Atkinson89} aiming to find $[S_{in}]^*$ and $[P_1]^*$. We ran the algorithm starting from very low values of concentration (both set to $10^{-20}M$) to determine numerically the equilibrium without facing convergence problems. The final flux can then be determined through the ``production'' part of equation (\ref{mathMMT2R_deg}), \textit{i.e.} $V_{m2}.\frac{[P_1]}{K_{M2}+[P_1]}$.
+
+
+\subsection{Validation of the method and computing of the fitness landscapes}
+
+To validate the approach, we compared equilibrium results obtained with Raphson-Newton algorithm to those obtained when simulating the process with Euler explicit schemes for a set of (3x3) kinetic values -- $k_\text{cat}$ and $k_f$ -- encompassing three orders of magnitude (see SM - Section Text 5 for further details).
+
+We then drew fitness landscapes after determining the flux -- assumed to be to be linearly related to fitness -- achieved for enzyme kinetic parameters $k_\text{cat}$ and $k_f$ varying by 10 orders of magnitude, setting $k_r$ to $10^3 s^{-1}$ -- within the range found for several enzymes \citep{Klipp94,Knowles77} -- unless stated otherwise. Except in the section dedicated to the influence of enzyme concentration, we set the enzyme concentration such that $[E_{tot}]=1mM$, lying nearby the highest observed values \citep{Albe90,Noor16}. Other parameters are detailed on a case-by-case basis as they may change depending on the goal of each section. To compare with the data and visualize results in the experimenter's parameter space, we also determined the flux and plotted simulation results using $k_\text{cat}$ and $\frac{k_\text{cat}}{K_M}$, also making them vary by 10 orders of magnitude. We divided the parameter space in 100 log-equidistant values (250 for representations with $k_{cat}/K_M$ to obtain a cleaner demarcation for the diffusion limit).
+
+\subsection{Population genetics model}
+
+Evolutionary simulations rely on a Wright-Fisher process including the selective effects of mutations displacing enzymes on mathematically-derived fitness landscapes. Two fitness landscapes were considered: weak flux, high affinity (Fig.~S3~A of SM) and high flux, low affinity (Fig.~S3~I of SM), both with saturated facilitated diffusion ($[S_{out}]=10K_T$) and the following constant parameters: $k_r=10^3s^{-1}$ and $[E_{tot}]=1mM$. Mutations occur at a rate $\mu=10^{-1}/N_e$ following reproduction, with an effect sampled in Gaussian distributions with dispersion ($\sigma=0.3$). The mean effect of a mutation is given by parameter $b$, hence representing the mutation bias -- absent with $b=0$, low ($b=-0.1$) or high ($b=-0.2$). Kinetic parameters were initiated to the inefficient values of $k_{cat}=10^{-3}s^{-1}$ and $k_f=10^2M^{-1}s^{-1}$ and $k_f$ was limited to values under the diffusion limit -- $10^{10}M^{-1}s^{-1}$ ($k_{cat}$ was also limited to $10^{6}s^{-1}$ when $b=0$ to avoid physical outliers). To analyse simulation outcomes, we picked out the kinetic and fitness values of the most represented genotype when multiple variants were segregating. 30 simulations were ran for each set of parameters. Finally, we verified that evolutionary steady-states were reached and considered it was the case when at least the average fitnesses (over all simulations) of the last three time-steps were not significantly different one from another (SM Figures S5 and S6).
+
+We also simulated the case where mutations between parameters are correlated. We tested both positive and negative mutational relationships through a bivariate Gaussian distribution whose correlation coefficient were set to $\rho=-0.8$, $\rho=-0.5$, $\rho=+0.5$ (see SM Figure 18 for the results with a moderate flux). 
+
+\subsection{Evolution of enzyme concentrations}
+
+Finally, we simulated the joint evolution between kinetic parameters and enzyme concentration, repeating the previous procedure with concentration as an evolvable quantity and the fitness function including deleterious effects of extra gene expression (see SM section Text S5 for the effect of each cost considered independently one from another). Mutations affected either levels of expression or kinetic constants, with those affecting levels of expression (in log values) being drawn from Gaussian distributions with mean $0$ and $\sigma=0.2$ to comply with existing estimates \citep{Landry07,Metzger16,Hodgins-Davis19}. Because sugars are directly involved in energy metabolism, we computed these simulations for the case of a high flux which can more readily be linked to the cost of expression.
+
+As explained above, producing extra proteins is costly, both energetically and because it may increase a cell's crowding. The cost of protein production is considered to be proportional to the steady-state enzyme concentration, with a slope $c$. Empirical estimates suggest that $c$ should be in the range $[10^{-4}, 10^{-3}]$ \citep{Wagner05,Lynch15}, such that producing an extra mM of a protein would impede the whole energy budget by one $10000^\text{th}$ to one $1000^\text{th}$ (we also consider $c=10^{-5}$ and $10^{-2}$ in the SM). Accordingly, we calculate the absolute fitness $f=\Phi-[E_{tot}]c$, where $\Phi$ is the flux generated by the enzyme. 
+
+The influence of crowding was computed by penalizing $k_f$ through an effective $k_{f,act}=k_f.10^{-([E_{tot}]+[M_b])/[2M_b]}$, where $[M_b]=2.5.10^{-3}M$ represents the basal protein concentration of a viable cell and also constitutes a scaling factor that complies with \citet{Andrews20} log-linear influence of crowding or glass transition effects described by \citep{Dill11}.
+
+
+\subsection{Data availability}
+
+All the enzyme data used in this work to compare fitness landscapes and measured values were recovered from \citep{Bar-Even11}, and so was the classification of reactions with regards to metabolic groups. Thanks to their authors and publisher, datasets are publicly available at https://pubs.acs.org/doi/10.1021/bi2002289. Apart from that, no new data were generated in support of this research.
+
+\section{Supplementary Material}
+
+Supplementary material is available online. 
+
+\bibliographystyle{natbib}%%%%natbib.sty
+\bibliography{enzyme.bib}%%%refs.bib
+
+
+\end{document}

@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Draft_Enzyme_Efficiency_Evolution_.aux
+The style file: natbib.bst
+Database file #1: enzyme.bib
+Warning--empty journal in Wright34
+You've used 74 entries,
+            2378 wiz_defined-function locations,
+            1117 strings with 19435 characters,
+and the built_in function-call counts, 38203 in all, are:
+= -- 3674
+> -- 2161
+< -- 48
++ -- 673
+- -- 633
+* -- 3670
+:= -- 6563
+add.period$ -- 331
+call.type$ -- 74
+change.case$ -- 461
+chr.to.int$ -- 72
+cite$ -- 75
+duplicate$ -- 1444
+empty$ -- 2468
+format.name$ -- 751
+if$ -- 7516
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 80
+newline$ -- 373
+num.names$ -- 296
+pop$ -- 433
+preamble$ -- 1
+purify$ -- 466
+quote$ -- 0
+skip$ -- 969
+stack$ -- 0
+substring$ -- 2697
+swap$ -- 292
+text.length$ -- 9
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 648
+warning$ -- 1
+while$ -- 355
+width$ -- 0
+write$ -- 966
+(There was 1 warning)
